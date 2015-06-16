@@ -16,6 +16,8 @@ var items = [
 ].join("");
 
 var cartPage = [
+  '<div id="cartPageContent">',
+  '<div id="cartItemsBlock">',
   '<div class="catalogProductBlock">',
   '<div class="catalogProductBlockImage">',
   '<%= image %>',
@@ -35,7 +37,9 @@ var cartPage = [
   '<%= subtotalPrice %>',
   '</div>',
   '<div class="proceedToCheckout">',
-  '<button type="button" class="btn btn-success">Proceed to Checkout</button>',
+  '<button id="cartCheckOutButton">Checkout</button>',
+  '</div>',
+  '</div>',
   '</div>',
   '</div>',
   '</div>'

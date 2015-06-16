@@ -15,7 +15,7 @@ var items = [
   '</div>'
 ].join("");
 
-var productPage = [
+var cartPage = [
   '<div class="catalogProductBlock">',
   '<div class="catalogProductBlockImage">',
   '<%= image %>',
@@ -38,5 +38,5 @@ var productPage = [
   '<button type="button" class="btn btn-success">Proceed to Checkout</button>',
   '</div>',
   '</div>',
-  '</div>',
+  '</div>'
 ].join("");

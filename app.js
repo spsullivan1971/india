@@ -57,6 +57,12 @@ var page = {
         $('#productPage').addClass('activePage');
       });
 
+      $('#cartContinueShoppingButton').on('click', function(e) {
+        e.preventDefault();
+        $('#cartPage').removeClass('activePage');
+        $('#catalogPage').addClass('activePage');
+      });
+
   },
 
   addOneItemToCart: function() {

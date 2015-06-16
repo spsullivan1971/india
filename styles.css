@@ -339,7 +339,11 @@ footer {
     display: flex;
     justify-content: center; }
     footer #footerRight #footerRightBlock {
+<<<<<<< HEAD
+      width: 50%; }
+=======
       width: 75%; }
+>>>>>>> c2d3a11708083e65c5ab7f6fbe4d286ec3f1a926
       footer #footerRight #footerRightBlock #footerRightBlockTitle {
         text-align: center;
         padding: 15px 0; }
@@ -356,7 +360,10 @@ footer {
           margin-bottom: 15px; }
           footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock .contactLabel {
             width: 50%;
+<<<<<<< HEAD
+=======
             text-align: center;
+>>>>>>> c2d3a11708083e65c5ab7f6fbe4d286ec3f1a926
             font-weight: bolder; }
           footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock .contactInfo {
             width: 50%; }

@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Muff N' Puff</title>
-  <link href='http://fonts.googleapis.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Roboto:700,400,100' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Alex+Brush|Roboto+Slab:400,100|Roboto:400,100,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="bower_components/normalize.css/normalize.css">
   <link rel="stylesheet" type="text/css" href="bower_components/octicons/octicons/octicons.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
@@ -25,7 +25,7 @@
       </div>
     </div>
     <div id="headerRight">
-      <div id="headerRightBlock">
+      <div id="headerRightBlock" class="inactiveHeaderRightBlock">
           <form id="logInForm">
             <div id="logInInput">
               <label for="logInUsername">Username:</label>
@@ -35,6 +35,21 @@
               <input type="submit" id="logInSubmitButton">
             </div>
           </form>
+      </div>
+      <div id="headerRightBlock2">
+        <div id="headerRightBlock2Inner">
+          <div id="usernameBlock">
+            Username
+          </div>
+          <div id="cartBlock">
+            <div id="cartBlockImage">
+              <i class="fa fa-shopping-cart"></i>
+            </div>
+            <div id="cartBlockAmount">
+              4
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -150,20 +165,129 @@
     </div>
   </div>
   <div id="productPage">
-
+    <div id="productPageTitle">
+      <h2>Product Name</h2>
+    </div>
+    <div id="productPageContent">
+      <div id="productPageLeft">
+        <div id="productPageLeftBlock">
+          <img src="http://www.placehold.it/800/800">
+        </div>
+      </div>
+      <div id="productPageRight">
+        <div id="productPageRightBlock">
+          <div id="productDescriptionBlock">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore iusto et, similique, nemo dolorem corrupti quos praesentium! Molestias laborum, fugit facere nisi, nulla non cupiditate nostrum unde, nihil a exercitationem!
+          </div>
+          <div id="productPriceBlock">
+            $7.99
+          </div>
+          <div id="productCartBlock">
+            <button id="productAddToCartButton">Add To Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div id="cartPage">
-
+  <div id="cartPage" class="activePage">
+    <div id="cartPageTitle">
+      <h2>Cart</h2>
+    </div>
+    <div id="cartPageContent">
+      <div id="cartItemsBlock">
+        <div class="cartItem">
+          <div class="cartItemLeft">
+            <div class="cartItemImage">
+              <img src="http://www.placehold.it/200/200">
+            </div>
+          </div>
+          <div class="cartItemMiddle">
+            <div class="cartItemTitle">
+              Product Title
+            </div>
+          </div>
+          <div class="cartItemRight">
+            <div class="cartItemPrice">
+              $4.99
+            </div>
+          </div>
+        </div>
+        <div class="cartItem">
+          <div class="cartItemLeft">
+            <div class="cartItemImage">
+              <img src="http://www.placehold.it/200/200">
+            </div>
+          </div>
+          <div class="cartItemMiddle">
+            <div class="cartItemTitle">
+              Product Title
+            </div>
+          </div>
+          <div class="cartItemRight">
+            <div class="cartItemPrice">
+              $4.99
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cartInfoBlock">
+        <div id="cartTotalPriceBlock">
+          <div id="cartTotalPrice">
+            $59.99
+          </div>
+        </div>
+        <div id="cartCheckOutBlock">
+          <div id="cartCheckOut">
+            <button id="cartCheckOutButton">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <footer>
     <div id="footerLeft">
       <div id="footerLeftBlock">
-
+        <div id="footerLeftBlockTitle">
+          <h3>About Us</h3>
+        </div>
+        <div id="footerLeftBlockContent">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam sequi, nostrum molestias quae? Consectetur, nobis veniam nemo rerum labore veritatis exercitationem nihil illum incidunt, voluptatibus officia sed eius minus officiis.
+          </p>
+        </div>
       </div>
     </div>
     <div id="footerRight">
       <div id="footerRightBlock">
-
+        <div id="footerRightBlockTitle">
+          <h3>Contact</h3>
+        </div>
+        <div id="footerRightBlockContent">
+          <div class="contactBlock">
+            <div class="contactLabel">
+              Telephone:
+            </div>
+            <div class="contactInfo">
+              111-111-1111
+            </div>
+          </div>
+          <div class="contactBlock">
+            <div class="contactLabel">
+              Email:
+            </div>
+            <div class="contactInfo">
+              MuffnPuff@gmail.com
+            </div>
+          </div>
+          <div class="contactBlock">
+            <div class="contactLabel">
+              Address:
+            </div>
+            <div class="contactInfo">
+              123 Fake Street, Charleston SC 29403
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </footer>

@@ -4,11 +4,13 @@ VARIABLES
 
 $sansFont: 'Roboto', sans;
 $scriptFont: 'Alex Brush', cursive;
+$serifFont: 'Roboto Slab', serif;
 $mainFont: black;
 $headerFont: white;
 $primaryColor: #3A0256;
 $secondaryColor: #FFE600;
 $tertiaryColor: white;
+$red: #B31212;
 
 /*********************
 SETUP
@@ -54,6 +56,10 @@ GENERAL
   margin: 0 auto;
 }
 
+.activePage {
+  display: block !important;
+}
+
 /*********************
 HEADER
 *********************/
@@ -80,6 +86,7 @@ header {
         align-items: center;
 
         img {
+          cursor: pointer;
           width: 150px;
           height: 150px;
         }
@@ -110,6 +117,7 @@ header {
     #headerRightBlock {
       width: 100%;
       height: 60%;
+      display: block;
 
       #logInForm {
         height: 100%;
@@ -159,7 +167,51 @@ header {
         }
       }
     }
+
+    #headerRightBlock2 {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #headerRightBlock2Inner {
+        height: 60%;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+
+        #usernameBlock {
+          height: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        #cartBlock {
+          cursor: pointer;
+          border: 3px solid $primaryColor;
+          transition: all .25s ease;
+          -webkit-transition: all .25s ease;
+          display: flex;
+
+          > div {
+            width: 50%;
+            text-align: center;
+          }
+
+          &:hover {
+            border-color: $secondaryColor;
+
+          }
+        }
+      }
+    }
   }
+}
+
+.inactiveHeaderRightBlock {
+  display: none !important;
 }
 
 /*********************
@@ -167,7 +219,7 @@ CATALOG PAGE
 *********************/
 
 #catalogPage {
-
+  display: none;
 
   #catalogPageTitle {
     padding: 25px 0;
@@ -231,9 +283,258 @@ CATALOG PAGE
 }
 
 /*********************
+PRODUCT PAGE
+*********************/
+
+#productPage {
+  display: none;
+
+  #productPageTitle {
+    padding: 25px 0;
+    border-bottom: 1px solid $primaryColor;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: lighter;
+      color: $primaryColor;
+    }
+  }
+
+  #productPageContent {
+    margin: 25px 0;
+    display: flex;
+
+    #productPageLeft {
+      width: 50%;
+    }
+
+    #productPageRight {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+
+      #productPageRightBlock {
+        width: 80%;
+        color: $primaryColor;
+
+        > div {
+          margin-bottom: 15px;
+        }
+
+        #productDescriptionBlock {
+          font-family: $serifFont;
+        }
+
+        #productPriceBlock {
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: lighter;
+        }
+
+        #productCartBlock {
+          text-align: center;
+
+          button {
+            background-color: $red;
+            border: 3px solid white;
+            padding: 15px;
+            font-weight: lighter;
+            color: white;
+            transition: all .25s ease;
+            -webkit-transition: all .25s ease;
+
+            &:hover {
+              border-color: $red;
+              color: $red;
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*********************
+CART PAGE
+*********************/
+
+#cartPage {
+  display: none;
+
+  #cartPageTitle {
+    padding: 25px 0;
+    border-bottom: 1px solid $primaryColor;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: lighter;
+      color: $primaryColor;
+    }
+  }
+
+  #cartPageContent {
+    margin: 25px 0;
+
+    #cartItemsBlock {
+      border: 1px solid $primaryColor;
+
+      .cartItem {
+        width: 80%;
+        height: 150px;
+        margin: 0 auto;
+        border-bottom: 1px solid $primaryColor;
+        display: flex;
+        flex-wrap: wrap;
+
+        &:last-child {
+          border: none;
+        }
+
+        > div {
+          width: 33%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .cartItemImage {
+
+          img {
+            height: 100px;
+            width: 100px;
+          }
+        }
+      }
+    }
+
+    #cartInfoBlock {
+      width: 90%;
+      margin: 0 auto;
+
+      #cartTotalPriceBlock {
+        height: 75px;
+        display: flex;
+        justify-content: flex-end;
+
+        #cartTotalPrice {
+          width: 20%;
+          height: 100%;
+          font-size: 2rem;
+          font-weight: lighter;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      #cartCheckOutBlock {
+        height: 75px;
+        display: flex;
+        justify-content: flex-end;
+
+        #cartCheckOut {
+          width: 20%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          button {
+            background-color: $red;
+            border: 3px solid white;
+            padding: 18px;
+            font-weight: lighter;
+            color: white;
+            transition: all .25s ease;
+            -webkit-transition: all .25s ease;
+
+            &:hover {
+              border-color: $red;
+              color: $red;
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*********************
 FOOTER
 *********************/
 
 footer {
   background-color: $primaryColor;
+  display: flex;
+  color: $tertiaryColor;
+  padding-bottom: 25px;
+
+  #footerLeft {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    #footerLeftBlock {
+      width: 90%;
+
+      #footerLeftBlockTitle {
+        text-align: left;
+        padding: 15px 0;
+
+        h3 {
+          font-size: 2rem;
+          font-weight: lighter;
+        }
+      }
+
+      #footerLeftBlockContent {
+        font-size: .7rem;
+        font-weight: lighter;
+        font-family: $serifFont;
+      }
+    }
+  }
+
+  #footerRight {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+    #footerRightBlock {
+      width: 75%;
+
+      #footerRightBlockTitle {
+        text-align: center;
+        padding: 15px 0;
+
+        h3 {
+          font-size: 2rem;
+          font-weight: lighter;
+        }
+      }
+
+      #footerRightBlockContent {
+        font-size: .7rem;
+        font-weight: lighter;
+        font-family: $serifFont;
+
+        .contactBlock {
+          display: flex;
+          justify-content: flex-end;
+          margin-bottom: 15px;
+
+          .contactLabel {
+            width: 50%;
+            text-align: center;
+            font-weight: bolder;
+          }
+
+          .contactInfo {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,8 +1,9 @@
 {
-  "name": "muffandpuff",
+  "name": "india",
   "version": "0.0.0",
+  "homepage": "https://github.com/ClaytonKinder/india",
   "authors": [
-    "David Ashenfelder <Dashenfelder@gmail.com>"
+    "Clayton Kinder <ClaytonAlanKinder@gmail.com>"
   ],
   "license": "MIT",
   "ignore": [
@@ -11,8 +12,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "octicons": "~2.4.1"
-  }
+  ]
 }

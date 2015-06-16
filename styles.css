@@ -1,0 +1,164 @@
+/*********************
+VARIABLES
+*********************/
+/*********************
+SETUP
+*********************/
+html, body {
+  height: 100%;
+  width: 100%; }
+
+html {
+  font-size: 24px; }
+
+body {
+  font-family: "Roboto", sans; }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, ul, li, p {
+  margin: 0;
+  padding: 0; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: underline; }
+
+/*********************
+GENERAL
+*********************/
+#pageWrapper {
+  max-width: 960px;
+  margin: 0 auto; }
+
+/*********************
+HEADER
+*********************/
+header {
+  height: 200px;
+  background: #3A0256;
+  color: #FFE600;
+  display: flex;
+  margin-bottom: 50px; }
+  header #headerLeft {
+    width: 80%;
+    display: flex; }
+    header #headerLeft #headerLeftBlock {
+      width: 100%;
+      display: flex; }
+      header #headerLeft #headerLeftBlock #headerLeftLogo {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        header #headerLeft #headerLeftBlock #headerLeftLogo img {
+          width: 150px;
+          height: 150px; }
+      header #headerLeft #headerLeftBlock #headerLeftTitle {
+        width: 75%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; }
+        header #headerLeft #headerLeftBlock #headerLeftTitle h1 {
+          font-size: 3.5rem;
+          font-weight: lighter;
+          font-family: "Alex Brush", cursive; }
+  header #headerRight {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    header #headerRight #headerRightBlock {
+      width: 100%;
+      height: 60%; }
+      header #headerRight #headerRightBlock #logInForm {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: .75rem;
+        font-weight: lighter; }
+        header #headerRight #headerRightBlock #logInForm #logInInput {
+          height: 50%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center; }
+          header #headerRight #headerRightBlock #logInForm #logInInput > label {
+            color: #FFE600; }
+          header #headerRight #headerRightBlock #logInForm #logInInput > input {
+            height: 50%;
+            padding: 2.5px;
+            width: 90%;
+            border: 1px solid #FFE600;
+            background-color: #3A0256;
+            padding: 2.5px;
+            text-align: center; }
+            header #headerRight #headerRightBlock #logInForm #logInInput > input:focus {
+              outline: 0; }
+        header #headerRight #headerRightBlock #logInForm #logInSubmit {
+          height: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          header #headerRight #headerRightBlock #logInForm #logInSubmit > input {
+            width: 90%;
+            background: #3A0256;
+            border: 1px solid #FFE600;
+            padding: 10px 0; }
+
+/*********************
+CATALOG PAGE
+*********************/
+#catalogPage #catalogPageTitle {
+  padding: 25px 0;
+  border-bottom: 1px solid #3A0256; }
+  #catalogPage #catalogPageTitle h2 {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: #3A0256; }
+#catalogPage #catalogPageContent {
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  #catalogPage #catalogPageContent .catalogProductBlock {
+    width: 22.5%;
+    margin-bottom: 25px;
+    cursor: pointer;
+    color: white;
+    transition: all .25s ease;
+    -webkit-transition: all .25s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockImage {
+      width: 100%;
+      background-color: #3A0256; }
+      #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockImage img {
+        width: 100%; }
+    #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo {
+      width: 100%;
+      background-color: #3A0256;
+      text-align: center; }
+      #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo .catalogProductBlockTitle {
+        font-weight: lighter;
+        font-size: 1.15rem; }
+      #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo .catalogProductBlockPrice {
+        font-size: .6rem;
+        padding-bottom: 2.5px; }
+    #catalogPage #catalogPageContent .catalogProductBlock:hover {
+      color: #FFE600; }
+
+/*********************
+FOOTER
+*********************/
+footer {
+  background-color: #3A0256; }
+
+/*# sourceMappingURL=styles.css.map */

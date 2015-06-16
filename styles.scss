@@ -86,6 +86,7 @@ header {
         align-items: center;
 
         img {
+          cursor: pointer;
           width: 150px;
           height: 150px;
         }
@@ -501,7 +502,7 @@ footer {
     justify-content: center;
 
     #footerRightBlock {
-      width: 50%;
+      width: 75%;
 
       #footerRightBlockTitle {
         text-align: center;
@@ -525,6 +526,7 @@ footer {
 
           .contactLabel {
             width: 50%;
+            text-align: center;
             font-weight: bolder;
           }
 

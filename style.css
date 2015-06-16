@@ -1,0 +1,59 @@
+/*
+Error: Invalid CSS after "      width: 50%": expected "{", was ";"
+        on line 506 of styles.scss
+
+501:     display: flex;
+502:     justify-content: center;
+503: 
+504:     #footerRightBlock {
+505: <<<<<<< HEAD
+506:       width: 50%;
+507: =======
+508:       width: 75%;
+509: >>>>>>> c2d3a11708083e65c5ab7f6fbe4d286ec3f1a926
+510: 
+511:       #footerRightBlockTitle {
+
+Backtrace:
+styles.scss:506
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:1162:in `expected'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:1098:in `expected'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:1093:in `tok!'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:638:in `block'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:708:in `declaration_or_ruleset'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:658:in `block_child'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:647:in `block_contents'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:639:in `block'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:708:in `declaration_or_ruleset'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:658:in `block_child'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:650:in `block_contents'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:639:in `block'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:708:in `declaration_or_ruleset'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:658:in `block_child'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:650:in `block_contents'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:639:in `block'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:632:in `ruleset'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:657:in `block_child'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:650:in `block_contents'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:117:in `stylesheet'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/scss/parser.rb:42:in `parse'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/engine.rb:393:in `_to_tree'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.14/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.10.0/lib/listen/listener.rb:291:in `call'
+/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.10.0/lib/listen/listener.rb:291:in `_process_changes'
+/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.10.0/lib/listen/listener.rb:255:in `block in _wait_for_changes'
+/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.10.0/lib/listen/listener.rb:238:in `loop'
+/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.10.0/lib/listen/listener.rb:238:in `_wait_for_changes'
+/usr/local/lib/ruby/gems/2.2.0/gems/listen-2.10.0/lib/listen/listener.rb:327:in `block in _start_wait_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"      width: 50%\": expected \"{\", was \";\"\A         on line 506 of styles.scss\A \A 501:     display: flex;\A 502:     justify-content: center;\A 503: \A 504:     #footerRightBlock {\A 505: <<<<<<< HEAD\A 506:       width: 50%;\A 507: =======\A 508:       width: 75%;\A 509: >>>>>>> c2d3a11708083e65c5ab7f6fbe4d286ec3f1a926\A 510: \A 511:       #footerRightBlockTitle {"; }

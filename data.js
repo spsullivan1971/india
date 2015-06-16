@@ -13,7 +13,7 @@ templates.catalogBlock = [
   '<%= productPrice %>',
   '</div>',
   '</div>',
-  '</div>',
+  '</div>'
 ].join("");
 
 templates.productPage = [

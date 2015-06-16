@@ -1,4 +1,6 @@
-var items = [
+var templates = {};
+
+templates.items = [
   '<div class="catalogProductBlock">',
   '<div class="catalogProductBlockImage">',
   '<%= image %>',
@@ -15,7 +17,7 @@ var items = [
   '</div>'
 ].join("");
 
-var cartPage = [
+templates.cartPage = [
   '<div id="cartPageContent">',
   '<div id="cartItemsBlock">',
   '<div class="catalogProductBlock">',

@@ -91,8 +91,8 @@ header {
 
         img {
           cursor: pointer;
-          width: 150px;
-          height: 150px;
+          width: 125px;
+          height: 125px;
         }
       }
 
@@ -379,9 +379,39 @@ PRODUCT PAGE
   #productPageContent {
     margin: 25px 0;
     display: flex;
+    flex-wrap: wrap;
 
     #productPageLeft {
       width: 50%;
+
+      #productPagePairingBlock {
+        margin-top: 35px;
+        padding: 35px 15px 15px;
+        position: relative;
+        border: 1px solid $primaryColor;
+
+        h4 {
+          position: absolute;
+          top: -32.5px;
+          left: 10px;
+          background-color: white;
+          font-size: 2rem;
+          font-weight: lighter;
+          color: $primaryColor;
+        }
+
+        #productPagePairingImage {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          img {
+            cursor: pointer;
+            max-height: 100px;
+            max-width: 100px;
+          }
+        }
+      }
     }
 
     #productPageRight {
@@ -414,6 +444,7 @@ PRODUCT PAGE
             background-color: $red;
             border: 3px solid white;
             padding: 15px;
+            position: relative;
             font-weight: lighter;
             color: white;
             transition: all .25s ease;
@@ -423,11 +454,164 @@ PRODUCT PAGE
               border-color: $red;
               color: $red;
               background-color: white;
+
+
             }
 
             &:focus {
               outline: 0;
             }
+
+            #cartPlusOne {
+              display: none;
+              color: white;
+              position: absolute;
+              background-color: $red;
+              right: -55px;
+              top: 6px;
+              padding: 10px;
+              border-radius: 50%;
+              transition: all 1s ease;
+            }
+
+            #cartPlusOne.productAddedAnimate {
+              transform: translateY(-100px);
+              opacity: 1;
+            }
+
+            #cartPlusOne.productAddedStarting {
+              opacity: 0;
+              transform: translateY(0px);
+            }
+          }
+        }
+      }
+    }
+
+    #productPageReviews {
+      margin-top: 50px;
+      padding: 35px 0 15px;
+      position: relative;
+      width: 100%;
+      border: 1px solid $primaryColor;
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        position: absolute;
+        background-color: white;
+        top: -32.5px;
+        left: 10px;
+        font-size: 2rem;
+        font-weight: lighter;
+      }
+
+      #productReviewsBlock {
+        min-height: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+
+        .productReview {
+          width: 40%;
+          border: 1px solid $primaryColor;
+          margin-bottom: 25px;
+          color: white;
+
+          .productReviewContent {
+            min-height: 125px;
+            padding: 7.5px;
+            color: $primaryColor;
+          }
+
+          .reviewBottom {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+
+            .productReviewRating {
+              width: 50%;
+              height: 100%;
+              display: flex;
+              background-color: $red;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .productReviewAuthor {
+              width: 50%;
+              height: 100%;
+              background-color: $red;
+              padding: 7.5px 5px;
+              display: flex;
+              justify-content: flex-end;
+              align-items: center;
+            }
+          }
+
+
+        }
+      }
+    }
+
+    #productReviewsFormBlock {
+      width: 100%;
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+
+      #productReviewsForm {
+        width: 40%;
+      }
+
+      #productReviewsFormUsername {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: lighter;
+      }
+
+      #productReviewsFormComment {
+
+        textarea {
+          width: 100%;
+          height: 150px;
+          resize: none;
+
+          &:focus {
+            outline: 0;
+          }
+        }
+      }
+
+      #productReviewsFormRating {
+        margin-bottom: 10px;
+
+        select {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      #productReviewsFormSubmit {
+
+        input {
+          width: 100%;
+          padding: 10px 0;
+          background-color: $primaryColor;
+          color: white;
+          border: 3px solid $primaryColor;
+          transition: all .25s ease;
+          -webkit-transition: all .25s ease;
+
+          &:hover {
+            background-color: white;
+            color: $primaryColor;
+          }
+
+          &:focus {
+            outline: 0;
           }
         }
       }
@@ -458,6 +642,7 @@ CART PAGE
 
     #cartItemsBlock {
       border: 1px solid $primaryColor;
+      min-height: 150px;
 
       .cartItem {
         width: 80%;
@@ -545,7 +730,8 @@ CART PAGE
         display: flex;
         justify-content: flex-end;
 
-        #cartCheckOut {
+        #cartCheckOut,
+        #cartContinue {
           width: 20%;
           height: 100%;
           display: flex;
@@ -553,9 +739,11 @@ CART PAGE
           justify-content: center;
 
           button {
+            width: 140.25px;
+            height: 70px;
             background-color: $red;
             border: 3px solid white;
-            padding: 18px;
+
             font-weight: lighter;
             color: white;
             transition: all .25s ease;
@@ -571,6 +759,7 @@ CART PAGE
               outline: 0;
             }
           }
+
         }
       }
     }

@@ -122,6 +122,27 @@ var page = {
      })
     });
 
+    $('#pageWrapper').on('click', '#catalogAddToCartButton', function(e) {
+      e.preventDefault();
+      $('#cartPlusOne').fadeIn().removeClass('productAddedStarting').addClass('productAddedAnimate');
+      setTimeout(function(){
+        $('#cartPlusOne').removeClass('productAddedAnimate').addClass('productAddedStarting');
+      }, 1000);
+      var newProduct = page.getProductFromCatalogAddCart(this);
+      console.log(newProduct);
+      $.ajax({
+        url: page.urlCart,
+        method: 'POST',
+        data: newProduct,
+        success: function (data) {
+          page.refreshCart(data);
+        },
+        error: function (err) {
+          console.log("error ", err);
+        }
+      });
+    });
+
     $('#cartItemsBlock').on('click', '.cartItemDelete', function(e){
       var deleteId = $(this).closest('.cartItem').data('id');
       console.log(deleteId);

@@ -10,8 +10,72 @@
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-
-
+<div id="loginFormWrapper" style="display: none;">
+  <form action="">
+    <label for="firstName">
+      <div id="labelText">
+      First Name:
+      </div>
+      <div id="loginFormInputWrapper">
+        <input class="textBox" type="text" placeholder="First Name">
+      </div>
+    </label>
+    <label for="lastName">
+    <div id="labelText">
+      Last Name:
+    </div>
+    <div id="loginFormInputWrapper">
+      <input class="textBox" type="text" placeholder="Last Name">
+    </div>
+  </label>
+  <label for="Email">
+    <div id="labelText">
+      Email:
+    </div>
+    <div id="loginFormInputWrapper">
+      <input class="textBox" type="text" placeholder="Email Address">
+    </div>
+  </label>
+  <label for="streetAddress">
+    <div id="labelText">
+      Street Address:
+    </div>
+    <div id="loginFormInputWrapper">
+      <input class="textBox" type="text" placeholder="Street Address">
+    </div>
+  </label>
+  <label for="city">
+    <div id="labelText">
+      City:
+    </div>
+    <div id="loginFormInputWrapper">
+      <input class="textBox" type="text" placeholder="City">
+    </div>
+  </label>
+  <label for="state">
+    <div id="labelText">
+      State:
+    </div>
+    <div id="loginFormInputWrapper">
+      <input class="textBox" type="text" placeholder="State">
+    </div>
+  </label>
+  <label for="zip">
+    <div id="labelText">
+      Zip:
+    </div>
+    <div id="loginFormInputWrapper">
+      <input class="textBox" type="text" placeholder="Zip">
+    </div>
+  </label>
+    <label id="createAcctSubmitWrapper">
+      <input id="createAcctSubmit" type="submit" name="submit" value="Create Account">
+    </label>
+    <label id="createAcctCancelWrapper">
+      <input id="createAcctCancel" type="button" name="submit" value="Cancel">
+    </label>
+  </form>
+</div>
 <div id="pageWrapper">
   <header>
     <div id="headerLeft">
@@ -33,6 +97,9 @@
             </div>
             <div id="logInSubmit">
               <input type="submit" id="logInSubmitButton">
+            </div>
+            <div id="createAcct">
+              <input type="submit" id="createAcctBtn" value="Create Account">
             </div>
           </form>
           <div id="usernameBlock" class="hidePage">
@@ -58,11 +125,12 @@
       <h2>Catalog</h2>
     </div>
     <div id="catalogPageContent">
-        <!-- CATALOG PRODUCT BLOCKS GO HERE -->
+
     </div>
   </div>
   <div id="productPage">
     <!-- PRODUCT PAGE GOES HERE -->
+  
   </div>
   <div id="cartPage">
     <div id="cartPageTitle">

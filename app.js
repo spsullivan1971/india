@@ -47,6 +47,12 @@ var page = {
       $('#productPage').addClass('activePage');
     });
   /////////////////////////
+  ///Login Form Submission button////////
+  $('#loginFormWrapper').on('click', '#createAcctSubmit', function(e) {
+      e.preventDefault();
+      page.acctFormSubmission()
+  });
+  ///////////////////////////////////////
 
       $('#headerRight').on('click', '#logInSubmitButton', function(event) {
       event.preventDefault();
@@ -61,6 +67,7 @@ var page = {
       var newProduct = page.getProductFromCatalog(this);
       $('#productPage').html("");
       page.loadTemplate('productPage', newProduct, $('#productPage'));
+      $("html, body").animate({ scrollTop: 270 }, "slow");
       _.each(products, function(el,idx,arr) {
         if (newProduct.pairing === el.productTitle) {
           $('#productPagePairingImage').html(el.productThumb);
@@ -109,12 +116,56 @@ var page = {
           console.log("error ", err);
         }
       });
+
+      $('#cartCheckOutButton').on('click', function(e) {
+       e.preventDefault();
+       alert("You have checkout out! Thank you for your order!")
+     })
+    });
+
+    $('#pageWrapper').on('click', '#catalogAddToCartButton', function(e) {
+      e.preventDefault();
+      $('#cartPlusOne').fadeIn().removeClass('productAddedStarting').addClass('productAddedAnimate');
+      setTimeout(function(){
+        $('#cartPlusOne').removeClass('productAddedAnimate').addClass('productAddedStarting');
+      }, 1000);
+      var newProduct = page.getProductFromCatalogAddCart(this);
+      console.log(newProduct);
+      $.ajax({
+        url: page.urlCart,
+        method: 'POST',
+        data: newProduct,
+        success: function (data) {
+          page.refreshCart(data);
+        },
+        error: function (err) {
+          console.log("error ", err);
+        }
+      });
     });
 
     $('#cartItemsBlock').on('click', '.cartItemDelete', function(e){
       var deleteId = $(this).closest('.cartItem').data('id');
       console.log(deleteId);
       page.deleteItem(deleteId);
+    });
+
+    $('body').on('click','#productContinueShoppingButton', function(e) {
+      $('#cartPage').removeClass('activePage');
+      $('#productPage').removeClass('activePage');
+      $('#catalogPage').addClass('activePage');
+    });
+
+    $('#cartCheckOutButton').on('click', function(e) {
+      e.preventDefault();
+      alert("You have checked out! Thank you for your order!")
+    });
+
+    $('#cartBlock').on('click', function(e) {
+      e.preventDefault();
+      $('#cartPage').removeClass('activePage');
+      $('#productPage').removeClass('activePage');
+      $('#catalogPage').addClass('activePage');
     });
 
     $('#productContinueShoppingButton').on('click', function(e) {
@@ -153,6 +204,24 @@ var page = {
         page.postReview(newReview);
       }
     });
+
+      $('#pageWrapper').on('click', '#cartContinueShoppingButton', function(e){
+        e.preventDefault();
+        $('#productPage').removeClass('activePage');
+        $('#cartPage').removeClass('activePage');
+        $('#catalogPage').addClass('activePage');
+        $("html, body").animate({ scrollTop: 270 }, "slow");
+      });
+
+      $('#pageWrapper').on('click', '#createAcct', function(event){
+        event.preventDefault();
+        $('#loginFormWrapper').addClass('activePage')
+      })
+
+      $('body').on('click', '#createAcctCancel', function(event){
+        event.preventDefault();
+        $('#loginFormWrapper').removeClass('activePage')
+      })
 
   },
 
@@ -212,6 +281,26 @@ var page = {
     });
   },
 
+  getProductFromCatalogAddCart: function(product) {
+    var matchedProduct;
+    console.log($(product).closest(".catalogWrapper").find(".catalogProductBlockTitle").text());
+    _.each(products, function(el,idx,arr) {
+      if ($(product).closest(".catalogWrapper").find(".catalogProductBlockTitle").text().trim() === el.productTitle) {
+        matchedProduct = el;
+      }
+    });
+    console.log(matchedProduct);
+    var newProduct = {
+      productTitle: matchedProduct.productTitle,
+      productDescription: matchedProduct.productDescription,
+      productPrice: matchedProduct.productPrice,
+      productImage: matchedProduct.productImage,
+      productThumb: matchedProduct.productThumb,
+      pairing: matchedProduct.pairing
+    }
+    return newProduct;
+  },
+
   getProductFromCatalog: function(product) {
     var matchedProduct;
     _.each(products, function(el,idx,arr) {
@@ -247,6 +336,18 @@ var page = {
     }
 
     return newProduct;
+  },
+
+  acctFormSubmission: function() {
+      // var lineValue = $('#loginFormWrapper form input').val();
+      var submissionArr = []
+      $('#loginFormWrapper form input').each(function(idx, el, arr){
+        submissionArr.push($(el).val());
+        $('.textBox').val('')
+      });
+        submissionArr.splice(7, 2)
+
+
   },
 
   calculateCartTotal: function(products) {

@@ -75,14 +75,14 @@ header {
           font-weight: lighter;
           font-family: "Alex Brush", cursive; }
   header #headerRight {
-    width: 30%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center; }
     header #headerRight #headerRightBlock {
       width: 100%;
-      height: 60%;
+      height: 70%;
       display: flex;
       align-items: center; }
       header #headerRight #headerRightBlock #logInForm {
@@ -110,7 +110,7 @@ header {
             header #headerRight #headerRightBlock #logInForm #logInInput > input:focus {
               outline: 0; }
         header #headerRight #headerRightBlock #logInForm #logInSubmit {
-          height: 50%;
+          height: 30%;
           display: flex;
           justify-content: center;
           align-items: center; }
@@ -119,6 +119,20 @@ header {
             background: #3A0256;
             border: 1px solid white;
             padding: 10px 0; }
+        header #headerRight #headerRightBlock #logInForm #createAcct {
+          height: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 1%; }
+          header #headerRight #headerRightBlock #logInForm #createAcct > input {
+            width: 90%;
+            background: #3A0256;
+            border: none;
+            border-top: 1px solid white;
+            padding: 10px 0; }
+            header #headerRight #headerRightBlock #logInForm #createAcct > input:hover {
+              color: #B31212; }
     header #headerRight #headerRightBlock2 {
       height: 100%;
       width: 100%;
@@ -138,8 +152,8 @@ header {
         header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock {
           cursor: pointer;
           position: relative;
-          transition: all .25s ease;
-          -webkit-transition: all .25s ease;
+          transition: all 0.25s ease;
+          -webkit-transition: all 0.25s ease;
           display: flex; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock > div {
             text-align: center; }
@@ -147,15 +161,15 @@ header {
             width: 100%; }
             header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock #cartBlockImage i {
               font-size: 4rem;
-              transition: all .25s ease;
-              -webkit-transition: all .25s ease; }
+              transition: all 0.25s ease;
+              -webkit-transition: all 0.25s ease; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock #cartBlockAmount {
             position: absolute;
             color: #B31212;
             top: 25px;
             right: 30px;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock:hover i {
             color: #B31212; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock:hover #cartBlockAmount {
@@ -167,6 +181,90 @@ header {
 /*********************
 CATALOG PAGE
 *********************/
+#loginFormWrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  font-size: 2vmax;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  #loginFormWrapper form {
+    position: fixed;
+    top: 10%;
+    left: 21%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    height: auto;
+    width: 58%;
+    background-color: white;
+    opacity: none; }
+  #loginFormWrapper #loginFormInputWrapper {
+    width: 80%; }
+    #loginFormWrapper #loginFormInputWrapper input {
+      width: 90%; }
+  #loginFormWrapper #labelText {
+    width: 20%; }
+  #loginFormWrapper label {
+    width: 100%;
+    height: auto;
+    text-align: right;
+    display: flex;
+    align-items: center; }
+  #loginFormWrapper #createAcctSubmitWrapper {
+    width: 100%;
+    float: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #loginFormWrapper #createAcctSubmitWrapper #createAcctSubmit {
+      width: 35%;
+      background-color: #B31212;
+      border: 3px solid white;
+      padding: 15px;
+      font-weight: lighter;
+      color: white;
+      transition: all .25s ease;
+      -webkit-transition: all .25s ease; }
+      #loginFormWrapper #createAcctSubmitWrapper #createAcctSubmit:hover {
+        border-color: #B31212;
+        color: #B31212;
+        background-color: white; }
+      #loginFormWrapper #createAcctSubmitWrapper #createAcctSubmit:focus {
+        outline: 0; }
+  #loginFormWrapper #createAcctCancelWrapper {
+    width: 100%;
+    float: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #loginFormWrapper #createAcctCancelWrapper #createAcctCancel {
+      background-color: white;
+      width: 35%;
+      border: 3px solid white;
+      padding: 15px;
+      font-weight: lighter;
+      color: gray;
+      transition: all .25s ease;
+      -webkit-transition: all .25s ease; }
+      #loginFormWrapper #createAcctCancelWrapper #createAcctCancel:hover {
+        border-color: #B31212;
+        color: #B31212;
+        background-color: white; }
+      #loginFormWrapper #createAcctCancelWrapper #createAcctCancel:focus {
+        outline: 0; }
+  #loginFormWrapper input {
+    margin: 1%;
+    width: 73%;
+    justify-content: flex-end; }
+
 #catalogPage {
   display: none; }
   #catalogPage #catalogPageTitle {
@@ -181,14 +279,36 @@ CATALOG PAGE
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; }
-    #catalogPage #catalogPageContent .catalogProductBlock {
+    #catalogPage #catalogPageContent #catalogAddToCartButton {
+      background-color: #B31212;
+      border: 3px solid white;
+      padding: 18px;
+      font-weight: lighter;
+      color: white;
+      transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease;
+      font-size: 1em; }
+    #catalogPage #catalogPageContent #catalogAddToCartButton:hover {
+      background-color: white;
+      color: #B31212;
+      border-color: #B31212; }
+    #catalogPage #catalogPageContent .catalogWrapper {
       width: 22.5%;
+      height: 400px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease; }
+    #catalogPage #catalogPageContent .catalogProductBlock {
+      width: 100%;
       height: 300px;
-      margin-bottom: 25px;
+      margin-bottom: 5px;
       cursor: pointer;
       color: white;
-      transition: all .25s ease;
-      -webkit-transition: all .25s ease;
+      transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -288,8 +408,8 @@ PRODUCT PAGE
             position: relative;
             font-weight: lighter;
             color: white;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
             #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button:hover {
               border-color: #B31212;
               color: #B31212;
@@ -390,8 +510,8 @@ PRODUCT PAGE
         background-color: #3A0256;
         color: white;
         border: 3px solid #3A0256;
-        transition: all .25s ease;
-        -webkit-transition: all .25s ease; }
+        transition: all 0.25s ease;
+        -webkit-transition: all 0.25s ease; }
         #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input:hover {
           background-color: white;
           color: #3A0256; }
@@ -448,8 +568,8 @@ CART PAGE
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
             #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight .cartItemDeleteBlock .cartItemDelete:hover {
               background-color: #B31212;
               color: white;
@@ -490,8 +610,8 @@ CART PAGE
             border: 3px solid white;
             font-weight: lighter;
             color: white;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
             #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:hover,
             #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:hover,
             #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartClear button:hover {
@@ -552,5 +672,3 @@ footer {
             font-weight: bolder; }
           footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock .contactInfo {
             width: 50%; }
-
-/*# sourceMappingURL=styles.css.map */

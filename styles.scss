@@ -112,7 +112,7 @@ header {
   }
 
   #headerRight {
-    width: 30%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -120,7 +120,7 @@ header {
 
     #headerRightBlock {
       width: 100%;
-      height: 60%;
+      height: 70%;
       display: flex;
       align-items: center;
 
@@ -158,7 +158,7 @@ header {
         }
 
         #logInSubmit {
-          height: 50%;
+          height: 30%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -168,6 +168,26 @@ header {
             background: $primaryColor;
             border: 1px solid $secondaryColor;
             padding: 10px 0;
+          }
+        }
+
+        #createAcct {
+          height: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 1%;
+
+
+          > input {
+            width: 90%;
+            background: $primaryColor;
+            border: none;
+            border-top: 1px solid $secondaryColor;
+            padding: 10px 0;
+            &:hover {
+                color: $red;
+            }
           }
         }
       }
@@ -247,6 +267,116 @@ header {
 CATALOG PAGE
 *********************/
 
+#loginFormWrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  font-size: 2vmax;
+  background-color: rgba(0, 0, 0, .85);
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  form {
+    position: fixed;
+    top: 10%;
+    left: 21%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    height: auto;
+    width: 58%;
+    background-color: white;
+    opacity: none;
+  }
+  #loginFormInputWrapper {
+    width: 80%;
+    input {
+      width: 90%;
+    }
+  }
+  #labelText {
+    width: 20%;
+  }
+  label {
+    width: 100%;
+    height: auto;
+    text-align: right;
+    display: flex;
+    align-items: center;
+  }
+
+  #createAcctSubmitWrapper {
+    width: 100%;
+    float: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #createAcctSubmit {
+        width: 35%;
+        background-color: $red;
+        border: 3px solid white;
+        padding: 15px;
+        font-weight: lighter;
+        color: white;
+        transition: all .25s ease;
+        -webkit-transition: all .25s ease;
+
+        &:hover {
+          border-color: $red;
+          color: $red;
+          background-color: white;
+        }
+
+        &:focus {
+          outline: 0;
+        }
+    }
+  }
+  #createAcctCancelWrapper {
+    width: 100%;
+    float: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #createAcctCancel {
+      background-color: white;
+      width: 35%;
+      border: 3px solid white;
+      padding: 15px;
+      font-weight: lighter;
+      color: gray;
+      transition: all .25s ease;
+      -webkit-transition: all .25s ease;
+
+        &:hover {
+          border-color: $red;
+          color: $red;
+          background-color: white;
+        }
+
+        &:focus {
+          outline: 0;
+        }
+    }
+  }
+  input {
+    margin: 1%;
+    width: 73%;
+    justify-content: flex-end;
+
+
+  }
+}
+
+
+
+
+
 #catalogPage {
   display: none;
 
@@ -267,10 +397,38 @@ CATALOG PAGE
     justify-content: space-around;
     flex-wrap: wrap;
 
-    .catalogProductBlock {
+    #catalogAddToCartButton {
+      background-color: #B31212;
+      border: 3px solid white;
+      padding: 18px;
+      font-weight: lighter;
+      color: white;
+      transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease;
+      font-size: 1em;
+    }
+
+    #catalogAddToCartButton:hover {
+      background-color: white;
+      color: $red;
+      border-color: $red;
+    }
+
+    .catalogWrapper {
       width: 22.5%;
+      height: 400px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      transition: all .25s ease;
+      -webkit-transition: all .25s ease;
+    }
+
+    .catalogProductBlock {
+      width: 100%;
       height: 300px;
-      margin-bottom: 25px;
+      margin-bottom: 5px;
       cursor: pointer;
       color: $tertiaryColor;
       transition: all .25s ease;
@@ -314,6 +472,7 @@ CATALOG PAGE
           align-items: center;
           justify-content: center;
         }
+
       }
 
       &:hover {

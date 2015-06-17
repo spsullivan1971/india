@@ -77,6 +77,7 @@ var products = [{
   "Country of Origin": "Honduras",
   "quantity": 1,
 }, {
+
   "listing_id": 0008,
   "category_id": "Cigars",
   "productImage": "<img src='images/store_large/Romeo_y_Jullieta.jpg'>",
@@ -180,6 +181,7 @@ var products = [{
 var templates = {};
 
 templates.catalogBlock = [
+  '<div class="catalogWrapper">',
   '<div class="catalogProductBlock">',
   '<div class="catalogProductBlockImage">',
   '<%= productThumb %>',
@@ -190,7 +192,13 @@ templates.catalogBlock = [
   '</div>',
   '<div class="catalogProductBlockPrice">',
   '$<%= productPrice %>',
-  '</div></div></div>',
+  '</div>',
+  '</div>',
+  '</div>',
+  '<div class="catalogProductAddToCartBlock">',
+  '<button id="catalogAddToCartButton">Add To Cart</button>',
+  '</div>',
+  '</div>'
 ].join("");
 
 templates.productPage = [
@@ -218,6 +226,9 @@ templates.productPage = [
         '</div>',
         '<div id="productCartBlock">',
           '<button id="productAddToCartButton">Add To Cart<div id="cartPlusOne">+1</div></button>',
+        '</div>',
+        '<div id="productCartBlock">',
+          '<button id="productContinueShoppingButton">Continue Shopping</button>',
         '</div>',
       '</div>',
     '</div>',

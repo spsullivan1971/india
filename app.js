@@ -47,6 +47,12 @@ var page = {
       $('#productPage').addClass('activePage');
     });
   /////////////////////////
+  ///Login Form Submission button////////
+  $('#loginFormWrapper').on('click', '#createAcctSubmit', function(e) {
+      e.preventDefault();
+      page.acctFormSubmission()
+  });
+  ///////////////////////////////////////
 
       $('#headerRight').on('click', '#logInSubmitButton', function(event) {
       event.preventDefault();
@@ -61,6 +67,7 @@ var page = {
       var newProduct = page.getProductFromCatalog(this);
       $('#productPage').html("");
       page.loadTemplate('productPage', newProduct, $('#productPage'));
+      $("html, body").animate({ scrollTop: 270 }, "slow");
       _.each(products, function(el,idx,arr) {
         if (newProduct.pairing === el.productTitle) {
           $('#productPagePairingImage').html(el.productThumb);
@@ -108,7 +115,13 @@ var page = {
           console.log("error ", err);
         }
       });
+
+      $('#cartCheckOutButton').on('click', function(e) {
+       e.preventDefault();
+       alert("You have checkout out! Thank you for your order!")
+     })
     });
+
 
     $('#cartItemsBlock').on('click', '.cartItemDelete', function(e){
       var deleteId = $(this).closest('.cartItem').data('id');
@@ -161,6 +174,24 @@ var page = {
         page.postReview(newReview);
       }
     });
+
+      $('#pageWrapper').on('click', '#cartContinueShoppingButton', function(e){
+        e.preventDefault();
+        $('#productPage').removeClass('activePage');
+        $('#cartPage').removeClass('activePage');
+        $('#catalogPage').addClass('activePage');
+        $("html, body").animate({ scrollTop: 270 }, "slow");
+      });
+
+      $('#pageWrapper').on('click', '#createAcct', function(event){
+        event.preventDefault();
+        $('#loginFormWrapper').addClass('activePage')
+      })
+
+      $('body').on('click', '#createAcctCancel', function(event){
+        event.preventDefault();
+        $('#loginFormWrapper').removeClass('activePage')
+      })
 
   },
 
@@ -245,6 +276,18 @@ var page = {
     }
 
     return newProduct;
+  },
+
+  acctFormSubmission: function() {
+      // var lineValue = $('#loginFormWrapper form input').val();
+      var submissionArr = []
+      $('#loginFormWrapper form input').each(function(idx, el, arr){
+        submissionArr.push($(el).val());
+        $('.textBox').val('')
+      });
+        submissionArr.splice(7, 2)
+
+
   },
 
   calculateCartTotal: function(products) {

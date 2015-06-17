@@ -11,6 +11,7 @@
 </head>
 <body>
 
+
 <div id="pageWrapper">
   <header>
     <div id="headerLeft">
@@ -24,7 +25,7 @@
       </div>
     </div>
     <div id="headerRight">
-      <div id="headerRightBlock" class="inactiveHeaderRightBlock">
+      <div id="headerRightBlock" class="activeHeaderRightBlock">
           <form id="logInForm">
             <div id="logInInput">
               <label for="logInUsername">Username:</label>
@@ -34,18 +35,18 @@
               <input type="submit" id="logInSubmitButton">
             </div>
           </form>
+          <div id="usernameBlock" class="hidePage">
+            Logged in:
+          </div>
       </div>
       <div id="headerRightBlock2">
         <div id="headerRightBlock2Inner">
-          <div id="usernameBlock">
-            Username
-          </div>
           <div id="cartBlock">
             <div id="cartBlockImage">
               <i class="fa fa-shopping-cart"></i>
             </div>
             <div id="cartBlockAmount">
-              
+
             </div>
           </div>
         </div>
@@ -78,6 +79,9 @@
           </div>
         </div>
         <div id="cartCheckOutBlock">
+          <div id="cartCheckOut">
+            <button id="cartContinueShoppingButton">Continue Shopping</button>
+          </div>
           <div id="cartCheckOut">
             <button id="cartCheckOutButton">Checkout</button>
           </div>

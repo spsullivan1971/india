@@ -1,34 +1,3 @@
-var products = [
-  {
-    productTitle: 'Blueberry Muffin',
-    productDescription: 'A delicious classic! Blueberry muffins are a delicious way to start your day.',
-    productPrice: 4.99,
-    productImage: '<img src="images/store_large/blueberry_coconut.jpg">',
-    productThumb: '<img src="images/thumbs/blueberry_coconut.jpg">'
-  },
-  {
-    productTitle: 'Carrot Cake Muffin',
-    productDescription: 'A muffin fit for dessert! Carrot cake muffins go great with milk.',
-    productPrice: 5.99,
-    productImage: '<img src="images/store_large/carrot_cake_muffin.jpg">',
-    productThumb: '<img src="images/thumbs/carrot_cake_muffin.jpg">'
-  },
-  {
-    productTitle: 'Cranberry Orange Muffin',
-    productDescription: 'Citrusy and fulfilling! Cranberry and orange muffins are great-tasting and great for you.',
-    productPrice: 3.99,
-    productImage: '<img src="images/store_large/cranberry_orange.jpg">',
-    productThumb: '<img src="images/thumbs/cranberry_orange.jpg">'
-  },
-  {
-    productTitle: 'Chocolate Chip Muffin',
-    productDescription: 'A muffin filled with chocolatey goodness! Terrific for when you want diabetes.',
-    productPrice: 5.99,
-    productImage: '<img src="images/store_large/chocolate_chip.jpg">',
-    productThumb: '<img src="images/thumbs/chocolate_chip.jpg">'
-  }
-];
-
 var $username = 'Guest';
 
 $(document).ready(function(){
@@ -78,6 +47,15 @@ var page = {
     });
   /////////////////////////
 
+      $('#headerRight').on('click', '#logInSubmitButton', function(event) {
+      event.preventDefault();
+      var $username = $('input[id="logInUsername"]').val()
+      $('#usernameBlock').append($username)
+      $('input[id="logInUsername"]').val('')
+      $('#logInForm').hide()
+      $('#usernameBlock').addClass('activePage')
+      })
+
     $('#catalogPageContent').on('click', '.catalogProductBlock', function(e) {
       var newProduct = page.getProductFromCatalog(this);
       $('#productPage').html("");
@@ -107,8 +85,25 @@ var page = {
       page.deleteItem(deleteId);
     });
 
+      $('#productContinueShoppingButton').on('click', function(e) {
+        e.preventDefault();
+        $('#cartPage').removeClass('activePage');
+        $('productPage').removeClass('activePage');
+        $('#catalogPage').addClass('activePage');
+      });
+
+      $('#cartContinueShoppingButton').on('click', function(e) {
+        e.preventDefault();
+        $('#cartPage').removeClass('activePage');
+        $('productPage').removeClass('activePage');
+        $('#catalogPage').addClass('activePage');
+      });
+
   },
 
+  addOneItemToCart: function() {
+    page.loadTemplate()
+  },
 
   loadItems: function() {
     $.ajax ({

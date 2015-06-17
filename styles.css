@@ -152,8 +152,8 @@ header {
         header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock {
           cursor: pointer;
           position: relative;
-          transition: all 0.25s ease;
-          -webkit-transition: all 0.25s ease;
+          transition: all .25s ease;
+          -webkit-transition: all .25s ease;
           display: flex; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock > div {
             text-align: center; }
@@ -161,15 +161,15 @@ header {
             width: 100%; }
             header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock #cartBlockImage i {
               font-size: 4rem;
-              transition: all 0.25s ease;
-              -webkit-transition: all 0.25s ease; }
+              transition: all .25s ease;
+              -webkit-transition: all .25s ease; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock #cartBlockAmount {
             position: absolute;
             color: #B31212;
             top: 25px;
             right: 30px;
-            transition: all 0.25s ease;
-            -webkit-transition: all 0.25s ease; }
+            transition: all .25s ease;
+            -webkit-transition: all .25s ease; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock:hover i {
             color: #B31212; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock:hover #cartBlockAmount {
@@ -279,16 +279,19 @@ CATALOG PAGE
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; }
-    #catalogPage #catalogPageContent #catalogAddToCartButton {
+    #catalogPage #catalogPageContent .catalogProductAddToCartBlock {
+      width: 100%; }
+    #catalogPage #catalogPageContent .catalogAddToCartButton {
       background-color: #B31212;
-      border: 3px solid white;
+      width: 100%;
+      border: none;
       padding: 18px;
       font-weight: lighter;
       color: white;
       transition: all 0.25s ease;
       -webkit-transition: all 0.25s ease;
       font-size: 1em; }
-    #catalogPage #catalogPageContent #catalogAddToCartButton:hover {
+    #catalogPage #catalogPageContent .catalogAddToCartButton:hover {
       background-color: white;
       color: #B31212;
       border-color: #B31212; }
@@ -299,16 +302,15 @@ CATALOG PAGE
       flex-flow: column;
       justify-content: center;
       align-items: center;
-      transition: all 0.25s ease;
-      -webkit-transition: all 0.25s ease; }
+      transition: all .25s ease;
+      -webkit-transition: all .25s ease; }
     #catalogPage #catalogPageContent .catalogProductBlock {
       width: 100%;
       height: 300px;
-      margin-bottom: 5px;
       cursor: pointer;
       color: white;
-      transition: all 0.25s ease;
-      -webkit-transition: all 0.25s ease;
+      transition: all .25s ease;
+      -webkit-transition: all .25s ease;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -408,8 +410,8 @@ PRODUCT PAGE
             position: relative;
             font-weight: lighter;
             color: white;
-            transition: all 0.25s ease;
-            -webkit-transition: all 0.25s ease; }
+            transition: all .25s ease;
+            -webkit-transition: all .25s ease; }
             #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button:hover {
               border-color: #B31212;
               color: #B31212;
@@ -425,7 +427,7 @@ PRODUCT PAGE
               top: 6px;
               padding: 10px;
               border-radius: 50%;
-              transition: all 1s ease; }
+              transition: all .5s ease; }
             #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button #cartPlusOne.productAddedAnimate {
               transform: translateY(-100px);
               opacity: 1; }
@@ -510,8 +512,8 @@ PRODUCT PAGE
         background-color: #3A0256;
         color: white;
         border: 3px solid #3A0256;
-        transition: all 0.25s ease;
-        -webkit-transition: all 0.25s ease; }
+        transition: all .25s ease;
+        -webkit-transition: all .25s ease; }
         #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input:hover {
           background-color: white;
           color: #3A0256; }
@@ -568,8 +570,8 @@ CART PAGE
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all 0.25s ease;
-            -webkit-transition: all 0.25s ease; }
+            transition: all .25s ease;
+            -webkit-transition: all .25s ease; }
             #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight .cartItemDeleteBlock .cartItemDelete:hover {
               background-color: #B31212;
               color: white;
@@ -594,29 +596,33 @@ CART PAGE
         display: flex;
         justify-content: flex-end; }
         #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut,
-        #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue {
+        #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue,
+        #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartClear {
           width: 20%;
           height: 100%;
           display: flex;
           align-items: center;
           justify-content: center; }
           #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button,
-          #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button {
+          #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button,
+          #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartClear button {
             width: 140.25px;
             height: 70px;
             background-color: #B31212;
             border: 3px solid white;
             font-weight: lighter;
             color: white;
-            transition: all 0.25s ease;
-            -webkit-transition: all 0.25s ease; }
+            transition: all .25s ease;
+            -webkit-transition: all .25s ease; }
             #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:hover,
-            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:hover {
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:hover,
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartClear button:hover {
               border-color: #B31212;
               color: #B31212;
               background-color: white; }
             #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:focus,
-            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:focus {
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:focus,
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartClear button:focus {
               outline: 0; }
 
 /*********************
@@ -668,3 +674,5 @@ footer {
             font-weight: bolder; }
           footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock .contactInfo {
             width: 50%; }
+
+/*# sourceMappingURL=styles.css.map */

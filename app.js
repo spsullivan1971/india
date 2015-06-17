@@ -11,8 +11,8 @@ var page = {
 
 
   init: function() {
-    page.initStyling();
-    page.initEvents();
+    // page.initStyling();
+    // page.initEvents();
   },
 
 

@@ -405,18 +405,22 @@ CATALOG PAGE
       background-color: #B31212;
       width: 100%;
       border: none;
-      padding: 18px;
+      padding: 4.5px;
       font-weight: lighter;
       color: white;
       transition: all 0.25s ease;
       -webkit-transition: all 0.25s ease;
       font-size: 1em;
-    }
 
-    .catalogAddToCartButton:hover {
-      background-color: white;
-      color: $red;
-      border-color: $red;
+      &:hover {
+        background-color: white;
+        color: $red;
+        border-color: $red;
+      }
+
+      &:focus {
+        outline: 0;
+      }
     }
 
     .catalogWrapper {

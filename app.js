@@ -59,9 +59,17 @@ var page = {
         $("html, body").animate({ scrollTop: 270 }, "slow");
       });
 
+      $('#productContinueShoppingButton').on('click', function(e) {
+        e.preventDefault();
+        $('#cartPage').removeClass('activePage');
+        $('productPage').removeClass('activePage');
+        $('#catalogPage').addClass('activePage');
+      });
+
       $('#cartContinueShoppingButton').on('click', function(e) {
         e.preventDefault();
         $('#cartPage').removeClass('activePage');
+        $('productPage').removeClass('activePage');
         $('#catalogPage').addClass('activePage');
       });
 

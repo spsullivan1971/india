@@ -270,7 +270,7 @@ CATALOG PAGE
     .catalogProductBlock {
       width: 22.5%;
       height: 300px;
-      margin-bottom: 25px;
+      margin-bottom: 75px;
       cursor: pointer;
       color: $tertiaryColor;
       transition: all .25s ease;
@@ -315,7 +315,22 @@ CATALOG PAGE
           justify-content: center;
         }
 
-        
+        #catalogAddToCartButton {
+          background-color: #B31212;
+        border: 3px solid white;
+        padding: 18px;
+        font-weight: lighter;
+        color: white;
+        transition: all 0.25s ease;
+        -webkit-transition: all 0.25s ease;
+        }
+
+        #catalogAddToCartButton:hover {
+          background-color: white;
+          color: $red;
+          border-color: $red;
+        }
+
       }
 
       &:hover {

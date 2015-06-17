@@ -138,8 +138,8 @@ header {
         header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock {
           cursor: pointer;
           position: relative;
-          transition: all .25s ease;
-          -webkit-transition: all .25s ease;
+          transition: all 0.25s ease;
+          -webkit-transition: all 0.25s ease;
           display: flex; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock > div {
             text-align: center; }
@@ -147,15 +147,15 @@ header {
             width: 100%; }
             header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock #cartBlockImage i {
               font-size: 4rem;
-              transition: all .25s ease;
-              -webkit-transition: all .25s ease; }
+              transition: all 0.25s ease;
+              -webkit-transition: all 0.25s ease; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock #cartBlockAmount {
             position: absolute;
             color: #B31212;
             top: 25px;
             right: 30px;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock:hover i {
             color: #B31212; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock:hover #cartBlockAmount {
@@ -168,13 +168,10 @@ header {
 CATALOG PAGE
 *********************/
 #catalogPage {
-  display: none;
-}
-
-#catalogPage #catalogPageTitle {
-  padding: 25px 0;
-  border-bottom: 1px solid #3A0256;
-}
+  display: none; }
+  #catalogPage #catalogPageTitle {
+    padding: 25px 0;
+    border-bottom: 1px solid #3A0256; }
     #catalogPage #catalogPageTitle h2 {
       font-size: 2.5rem;
       font-weight: lighter;
@@ -187,11 +184,11 @@ CATALOG PAGE
     #catalogPage #catalogPageContent .catalogProductBlock {
       width: 22.5%;
       height: 300px;
-      margin-bottom: 50px;
+      margin-bottom: 75px;
       cursor: pointer;
       color: white;
-      transition: all .25s ease;
-      -webkit-transition: all .25s ease;
+      transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -222,6 +219,18 @@ CATALOG PAGE
           display: flex;
           align-items: center;
           justify-content: center; }
+        #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo #catalogAddToCartButton {
+          background-color: #B31212;
+          border: 3px solid white;
+          padding: 18px;
+          font-weight: lighter;
+          color: white;
+          transition: all 0.25s ease;
+          -webkit-transition: all 0.25s ease; }
+        #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo #catalogAddToCartButton:hover {
+          background-color: white;
+          color: #B31212;
+          border-color: #B31212; }
       #catalogPage #catalogPageContent .catalogProductBlock:hover {
         color: #3A0256;
         background-color: white; }
@@ -268,8 +277,8 @@ PRODUCT PAGE
             padding: 15px;
             font-weight: lighter;
             color: white;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
             #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button:hover {
               border-color: #B31212;
               color: #B31212;
@@ -326,8 +335,8 @@ CART PAGE
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
             #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight .cartItemDeleteBlock .cartItemDelete:hover {
               background-color: #B31212;
               color: white;
@@ -363,8 +372,8 @@ CART PAGE
             padding: 18px;
             font-weight: lighter;
             color: white;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
             #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:hover {
               border-color: #B31212;
               color: #B31212;
@@ -421,5 +430,3 @@ footer {
             font-weight: bolder; }
           footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock .contactInfo {
             width: 50%; }
-
-/*# sourceMappingURL=styles.css.map */

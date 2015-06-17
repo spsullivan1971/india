@@ -9,6 +9,7 @@ var page = {
 
   url: 'http://tiy-fee-rest.herokuapp.com/collections/muffnpuff',
   urlCart: "http://tiy-fee-rest.herokuapp.com/collections/" + $username,
+  urlReviews: 'http://tiy-fee-rest.herokuapp.com/collections/reviews',
 
 
   init: function() {
@@ -46,6 +47,12 @@ var page = {
       $('#productPage').addClass('activePage');
     });
   /////////////////////////
+  ///Login Form Submission button////////
+  $('#loginFormWrapper').on('click', '#createAcctSubmit', function(e) {
+      e.preventDefault();
+      page.acctFormSubmission()
+  });
+  ///////////////////////////////////////
 
       $('#headerRight').on('click', '#logInSubmitButton', function(event) {
       event.preventDefault();
@@ -60,11 +67,68 @@ var page = {
       var newProduct = page.getProductFromCatalog(this);
       $('#productPage').html("");
       page.loadTemplate('productPage', newProduct, $('#productPage'));
+      $("html, body").animate({ scrollTop: 270 }, "slow");
+      _.each(products, function(el,idx,arr) {
+        if (newProduct.pairing === el.productTitle) {
+          $('#productPagePairingImage').html(el.productThumb);
+          $('#productPagePairingImage').attr('data', el.productTitle);
+        }
+      });
+      page.refreshReviews();
+    });
+
+    $('#productPage').on('click', '#productPagePairingImage img', function(e) {
+      var pairingTitle = $(this).closest('#productPagePairingImage').attr('data');
+      var newProduct;
+      _.each(products, function(el,idx,arr) {
+        if (pairingTitle === el.productTitle) {
+          newProduct = el;
+        }
+      });
+      $('#productPage').html("");
+      page.loadTemplate('productPage', newProduct, $('#productPage'));
+
+      _.each(products, function(el,idx,arr) {
+        if (newProduct.pairing === el.productTitle) {
+          $('#productPagePairingImage').html(el.productThumb);
+          $('#productPagePairingImage').attr('data', el.productTitle);
+        }
+      });
     });
 
     $('#productPage').on('click', '#productAddToCartButton', function(e) {
       e.preventDefault();
+      $('#cartPlusOne').fadeIn().removeClass('productAddedStarting').addClass('productAddedAnimate');
+      setTimeout(function(){
+        $('#cartPlusOne').removeClass('productAddedAnimate').addClass('productAddedStarting');
+      }, 1000);
       var newProduct = page.getProductFromProductPage(this);
+      console.log(newProduct);
+      $.ajax({
+        url: page.urlCart,
+        method: 'POST',
+        data: newProduct,
+        success: function (data) {
+          page.refreshCart(data);
+        },
+        error: function (err) {
+          console.log("error ", err);
+        }
+      });
+
+      $('#cartCheckOutButton').on('click', function(e) {
+       e.preventDefault();
+       alert("You have checkout out! Thank you for your order!")
+     })
+    });
+
+    $('#pageWrapper').on('click', '#catalogAddToCartButton', function(e) {
+      e.preventDefault();
+      $('#cartPlusOne').fadeIn().removeClass('productAddedStarting').addClass('productAddedAnimate');
+      setTimeout(function(){
+        $('#cartPlusOne').removeClass('productAddedAnimate').addClass('productAddedStarting');
+      }, 1000);
+      var newProduct = page.getProductFromCatalogAddCart(this);
       console.log(newProduct);
       $.ajax({
         url: page.urlCart,
@@ -85,19 +149,69 @@ var page = {
       page.deleteItem(deleteId);
     });
 
-      $('#productContinueShoppingButton').on('click', function(e) {
+    $('body').on('click','#productContinueShoppingButton', function(e) {
+      $('#cartPage').removeClass('activePage');
+      $('#productPage').removeClass('activePage');
+      $('#catalogPage').addClass('activePage');
+    });
+
+    $('#cartCheckOutButton').on('click', function(e) {
+      e.preventDefault();
+      alert("You have checked out! Thank you for your order!")
+    });
+
+    $('#cartBlock').on('click', function(e) {
+      e.preventDefault();
+      $('#cartPage').removeClass('activePage');
+      $('#productPage').removeClass('activePage');
+      $('#catalogPage').addClass('activePage');
+    });
+
+    $('#productContinueShoppingButton').on('click', function(e) {
+      e.preventDefault();
+      $('#cartPage').removeClass('activePage');
+      $('productPage').removeClass('activePage');
+      $('#catalogPage').addClass('activePage');
+    });
+
+    $('#cartContinueShoppingButton').on('click', function(e) {
+      e.preventDefault();
+      $('#cartPage').removeClass('activePage');
+      $('productPage').removeClass('activePage');
+      $('#catalogPage').addClass('activePage');
+    });
+
+    $('#productPage').on('submit', '#productReviewsForm', function(e){
+      e.preventDefault();
+      if ($('#productReviewsFormComment textarea').val().trim().length > 0) {
+        var newReview = {
+          reviewAuthor: $('#productReviewsFormUsername').text().trim(),
+          reviewContent: $('#productReviewsFormComment textarea').val().trim(),
+          reviewRating: $('#productReviewsFormRating select').val(),
+          reviewProduct: $(this).closest('#productPage').find("#productPageTitle").children().text()
+        }
+        $('#productReviewsFormComment textarea').val("");
+        page.postReview(newReview);
+      }
+    });
+
+      $('#pageWrapper').on('click', '#cartContinueShoppingButton', function(e){
         e.preventDefault();
+        $('#productPage').removeClass('activePage');
         $('#cartPage').removeClass('activePage');
-        $('productPage').removeClass('activePage');
         $('#catalogPage').addClass('activePage');
+        $("html, body").animate({ scrollTop: 270 }, "slow");
       });
 
-      $('#cartContinueShoppingButton').on('click', function(e) {
-        e.preventDefault();
-        $('#cartPage').removeClass('activePage');
-        $('productPage').removeClass('activePage');
-        $('#catalogPage').addClass('activePage');
-      });
+      $('#pageWrapper').on('click', '#createAcct', function(event){
+        event.preventDefault();
+        $('#loginFormWrapper').addClass('activePage')
+      })
+
+      $('body').on('click', '#createAcctCancel', function(event){
+        event.preventDefault();
+        $('#loginFormWrapper').removeClass('activePage')
+      })
 
   },
 
@@ -147,6 +261,26 @@ var page = {
     });
   },
 
+  getProductFromCatalogAddCart: function(product) {
+    var matchedProduct;
+    console.log($(product).closest(".catalogWrapper").find(".catalogProductBlockTitle").text());
+    _.each(products, function(el,idx,arr) {
+      if ($(product).closest(".catalogWrapper").find(".catalogProductBlockTitle").text().trim() === el.productTitle) {
+        matchedProduct = el;
+      }
+    });
+    console.log(matchedProduct);
+    var newProduct = {
+      productTitle: matchedProduct.productTitle,
+      productDescription: matchedProduct.productDescription,
+      productPrice: matchedProduct.productPrice,
+      productImage: matchedProduct.productImage,
+      productThumb: matchedProduct.productThumb,
+      pairing: matchedProduct.pairing
+    }
+    return newProduct;
+  },
+
   getProductFromCatalog: function(product) {
     var matchedProduct;
     _.each(products, function(el,idx,arr) {
@@ -159,7 +293,8 @@ var page = {
       productDescription: matchedProduct.productDescription,
       productPrice: matchedProduct.productPrice,
       productImage: matchedProduct.productImage,
-      productThumb: matchedProduct.productThumb
+      productThumb: matchedProduct.productThumb,
+      pairing: matchedProduct.pairing
     }
     return newProduct;
   },
@@ -176,9 +311,23 @@ var page = {
       productDescription: matchedProduct.productDescription,
       productPrice: matchedProduct.productPrice,
       productImage: matchedProduct.productImage,
-      productThumb: matchedProduct.productThumb
+      productThumb: matchedProduct.productThumb,
+      pairing: matchedProduct.pairing
     }
+
     return newProduct;
+  },
+
+  acctFormSubmission: function() {
+      // var lineValue = $('#loginFormWrapper form input').val();
+      var submissionArr = []
+      $('#loginFormWrapper form input').each(function(idx, el, arr){
+        submissionArr.push($(el).val());
+        $('.textBox').val('')
+      });
+        submissionArr.splice(7, 2)
+
+
   },
 
   calculateCartTotal: function(products) {
@@ -193,6 +342,50 @@ var page = {
   createCatalog: function() {
     _.each(products, function(el, idx, arr) {
       page.loadTemplate('catalogBlock', products[idx], $('#catalogPageContent'));
+    });
+  },
+
+  postReview: function(newReview) {
+    $.ajax({
+      url: page.urlReviews,
+      method: 'POST',
+      data: newReview,
+      success: function (data) {
+        console.log(data);
+        page.refreshReviews(data);
+      },
+      error: function (err) {
+        console.log("error ", err);
+      }
+    });
+  },
+
+  refreshReviews: function(reviews) {
+    console.log('Refreshing!');
+    $.ajax ({
+      url: page.urlReviews,
+      method: 'GET',
+      success: function(data) {
+        $('#productReviewsBlock').html("");
+        _.each(data, function(el,idx,arr) {
+          if (el.reviewProduct === $("#productPageTitle").children().text()) {
+            page.loadTemplate('productReview', el, $('#productReviewsBlock'));
+          }
+        });
+      },
+      error: function(err) {
+        console.log("error");
+      }
+    });
+  },
+
+  deleteAllReviews: function() {
+    $.ajax({
+      url: page.urlReviews,
+      method: 'DELETE',
+      success: function (data) {
+        page.refreshReviews();
+      }
     });
   },
 

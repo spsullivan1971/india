@@ -63,8 +63,8 @@ header {
         align-items: center; }
         header #headerLeft #headerLeftBlock #headerLeftLogo img {
           cursor: pointer;
-          width: 150px;
-          height: 150px; }
+          width: 125px;
+          height: 125px; }
       header #headerLeft #headerLeftBlock #headerLeftTitle {
         width: 75%;
         display: flex;
@@ -75,14 +75,14 @@ header {
           font-weight: lighter;
           font-family: "Alex Brush", cursive; }
   header #headerRight {
-    width: 30%;
+    width: 40%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center; }
     header #headerRight #headerRightBlock {
       width: 100%;
-      height: 60%;
+      height: 70%;
       display: flex;
       align-items: center; }
       header #headerRight #headerRightBlock #logInForm {
@@ -110,7 +110,7 @@ header {
             header #headerRight #headerRightBlock #logInForm #logInInput > input:focus {
               outline: 0; }
         header #headerRight #headerRightBlock #logInForm #logInSubmit {
-          height: 50%;
+          height: 30%;
           display: flex;
           justify-content: center;
           align-items: center; }
@@ -119,6 +119,20 @@ header {
             background: #3A0256;
             border: 1px solid white;
             padding: 10px 0; }
+        header #headerRight #headerRightBlock #logInForm #createAcct {
+          height: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 1%; }
+          header #headerRight #headerRightBlock #logInForm #createAcct > input {
+            width: 90%;
+            background: #3A0256;
+            border: none;
+            border-top: 1px solid white;
+            padding: 10px 0; }
+            header #headerRight #headerRightBlock #logInForm #createAcct > input:hover {
+              color: #B31212; }
     header #headerRight #headerRightBlock2 {
       height: 100%;
       width: 100%;
@@ -138,8 +152,8 @@ header {
         header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock {
           cursor: pointer;
           position: relative;
-          transition: all .25s ease;
-          -webkit-transition: all .25s ease;
+          transition: all 0.25s ease;
+          -webkit-transition: all 0.25s ease;
           display: flex; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock > div {
             text-align: center; }
@@ -147,15 +161,15 @@ header {
             width: 100%; }
             header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock #cartBlockImage i {
               font-size: 4rem;
-              transition: all .25s ease;
-              -webkit-transition: all .25s ease; }
+              transition: all 0.25s ease;
+              -webkit-transition: all 0.25s ease; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock #cartBlockAmount {
             position: absolute;
             color: #B31212;
             top: 25px;
             right: 30px;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock:hover i {
             color: #B31212; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock:hover #cartBlockAmount {
@@ -167,6 +181,90 @@ header {
 /*********************
 CATALOG PAGE
 *********************/
+#loginFormWrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  font-size: 2vmax;
+  background-color: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+  #loginFormWrapper form {
+    position: fixed;
+    top: 10%;
+    left: 21%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    height: auto;
+    width: 58%;
+    background-color: white;
+    opacity: none; }
+  #loginFormWrapper #loginFormInputWrapper {
+    width: 80%; }
+    #loginFormWrapper #loginFormInputWrapper input {
+      width: 90%; }
+  #loginFormWrapper #labelText {
+    width: 20%; }
+  #loginFormWrapper label {
+    width: 100%;
+    height: auto;
+    text-align: right;
+    display: flex;
+    align-items: center; }
+  #loginFormWrapper #createAcctSubmitWrapper {
+    width: 100%;
+    float: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #loginFormWrapper #createAcctSubmitWrapper #createAcctSubmit {
+      width: 35%;
+      background-color: #B31212;
+      border: 3px solid white;
+      padding: 15px;
+      font-weight: lighter;
+      color: white;
+      transition: all .25s ease;
+      -webkit-transition: all .25s ease; }
+      #loginFormWrapper #createAcctSubmitWrapper #createAcctSubmit:hover {
+        border-color: #B31212;
+        color: #B31212;
+        background-color: white; }
+      #loginFormWrapper #createAcctSubmitWrapper #createAcctSubmit:focus {
+        outline: 0; }
+  #loginFormWrapper #createAcctCancelWrapper {
+    width: 100%;
+    float: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #loginFormWrapper #createAcctCancelWrapper #createAcctCancel {
+      background-color: white;
+      width: 35%;
+      border: 3px solid white;
+      padding: 15px;
+      font-weight: lighter;
+      color: gray;
+      transition: all .25s ease;
+      -webkit-transition: all .25s ease; }
+      #loginFormWrapper #createAcctCancelWrapper #createAcctCancel:hover {
+        border-color: #B31212;
+        color: #B31212;
+        background-color: white; }
+      #loginFormWrapper #createAcctCancelWrapper #createAcctCancel:focus {
+        outline: 0; }
+  #loginFormWrapper input {
+    margin: 1%;
+    width: 73%;
+    justify-content: flex-end; }
+
 #catalogPage {
   display: none; }
   #catalogPage #catalogPageTitle {
@@ -181,14 +279,36 @@ CATALOG PAGE
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; }
-    #catalogPage #catalogPageContent .catalogProductBlock {
+    #catalogPage #catalogPageContent #catalogAddToCartButton {
+      background-color: #B31212;
+      border: 3px solid white;
+      padding: 18px;
+      font-weight: lighter;
+      color: white;
+      transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease;
+      font-size: 1em; }
+    #catalogPage #catalogPageContent #catalogAddToCartButton:hover {
+      background-color: white;
+      color: #B31212;
+      border-color: #B31212; }
+    #catalogPage #catalogPageContent .catalogWrapper {
       width: 22.5%;
+      height: 400px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease; }
+    #catalogPage #catalogPageContent .catalogProductBlock {
+      width: 100%;
       height: 300px;
-      margin-bottom: 25px;
+      margin-bottom: 5px;
       cursor: pointer;
       color: white;
-      transition: all .25s ease;
-      -webkit-transition: all .25s ease;
+      transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -239,9 +359,31 @@ PRODUCT PAGE
       color: #3A0256; }
   #productPage #productPageContent {
     margin: 25px 0;
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap; }
     #productPage #productPageContent #productPageLeft {
       width: 50%; }
+      #productPage #productPageContent #productPageLeft #productPagePairingBlock {
+        margin-top: 35px;
+        padding: 35px 15px 15px;
+        position: relative;
+        border: 1px solid #3A0256; }
+        #productPage #productPageContent #productPageLeft #productPagePairingBlock h4 {
+          position: absolute;
+          top: -32.5px;
+          left: 10px;
+          background-color: white;
+          font-size: 2rem;
+          font-weight: lighter;
+          color: #3A0256; }
+        #productPage #productPageContent #productPageLeft #productPagePairingBlock #productPagePairingImage {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center; }
+          #productPage #productPageContent #productPageLeft #productPagePairingBlock #productPagePairingImage img {
+            cursor: pointer;
+            max-height: 100px;
+            max-width: 100px; }
     #productPage #productPageContent #productPageRight {
       width: 50%;
       display: flex;
@@ -263,16 +405,118 @@ PRODUCT PAGE
             background-color: #B31212;
             border: 3px solid white;
             padding: 15px;
+            position: relative;
             font-weight: lighter;
             color: white;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
             #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button:hover {
               border-color: #B31212;
               color: #B31212;
               background-color: white; }
             #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button:focus {
               outline: 0; }
+            #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button #cartPlusOne {
+              display: none;
+              color: white;
+              position: absolute;
+              background-color: #B31212;
+              right: -55px;
+              top: 6px;
+              padding: 10px;
+              border-radius: 50%;
+              transition: all 1s ease; }
+            #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button #cartPlusOne.productAddedAnimate {
+              transform: translateY(-100px);
+              opacity: 1; }
+            #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button #cartPlusOne.productAddedStarting {
+              opacity: 0;
+              transform: translateY(0px); }
+    #productPage #productPageContent #productPageReviews {
+      margin-top: 50px;
+      padding: 35px 0 15px;
+      position: relative;
+      width: 100%;
+      border: 1px solid #3A0256;
+      display: flex;
+      flex-direction: column; }
+      #productPage #productPageContent #productPageReviews h4 {
+        position: absolute;
+        background-color: white;
+        top: -32.5px;
+        left: 10px;
+        font-size: 2rem;
+        font-weight: lighter; }
+      #productPage #productPageContent #productPageReviews #productReviewsBlock {
+        min-height: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center; }
+        #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview {
+          width: 40%;
+          border: 1px solid #3A0256;
+          margin-bottom: 25px;
+          color: white; }
+          #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .productReviewContent {
+            min-height: 125px;
+            padding: 7.5px;
+            color: #3A0256; }
+          #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .reviewBottom {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center; }
+            #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .reviewBottom .productReviewRating {
+              width: 50%;
+              height: 100%;
+              display: flex;
+              background-color: #B31212;
+              justify-content: center;
+              align-items: center; }
+            #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .reviewBottom .productReviewAuthor {
+              width: 50%;
+              height: 100%;
+              background-color: #B31212;
+              padding: 7.5px 5px;
+              display: flex;
+              justify-content: flex-end;
+              align-items: center; }
+    #productPage #productPageContent #productReviewsFormBlock {
+      width: 100%;
+      margin-top: 25px;
+      display: flex;
+      justify-content: center; }
+      #productPage #productPageContent #productReviewsFormBlock #productReviewsForm {
+        width: 40%; }
+      #productPage #productPageContent #productReviewsFormBlock #productReviewsFormUsername {
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: lighter; }
+      #productPage #productPageContent #productReviewsFormBlock #productReviewsFormComment textarea {
+        width: 100%;
+        height: 150px;
+        resize: none; }
+        #productPage #productPageContent #productReviewsFormBlock #productReviewsFormComment textarea:focus {
+          outline: 0; }
+      #productPage #productPageContent #productReviewsFormBlock #productReviewsFormRating {
+        margin-bottom: 10px; }
+        #productPage #productPageContent #productReviewsFormBlock #productReviewsFormRating select {
+          width: 100%;
+          text-align: center; }
+      #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input {
+        width: 100%;
+        padding: 10px 0;
+        background-color: #3A0256;
+        color: white;
+        border: 3px solid #3A0256;
+        transition: all 0.25s ease;
+        -webkit-transition: all 0.25s ease; }
+        #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input:hover {
+          background-color: white;
+          color: #3A0256; }
+        #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input:focus {
+          outline: 0; }
 
 /*********************
 CART PAGE
@@ -289,7 +533,8 @@ CART PAGE
   #cartPage #cartPageContent {
     margin: 25px 0; }
     #cartPage #cartPageContent #cartItemsBlock {
-      border: 1px solid #3A0256; }
+      border: 1px solid #3A0256;
+      min-height: 150px; }
       #cartPage #cartPageContent #cartItemsBlock .cartItem {
         width: 80%;
         height: 150px;
@@ -323,8 +568,8 @@ CART PAGE
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
             #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight .cartItemDeleteBlock .cartItemDelete:hover {
               background-color: #B31212;
               color: white;
@@ -348,25 +593,30 @@ CART PAGE
         height: 75px;
         display: flex;
         justify-content: flex-end; }
-        #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut {
+        #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut,
+        #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue {
           width: 20%;
           height: 100%;
           display: flex;
           align-items: center;
           justify-content: center; }
-          #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button {
+          #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button,
+          #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button {
+            width: 140.25px;
+            height: 70px;
             background-color: #B31212;
             border: 3px solid white;
-            padding: 18px;
             font-weight: lighter;
             color: white;
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
-            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:hover {
+            transition: all 0.25s ease;
+            -webkit-transition: all 0.25s ease; }
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:hover,
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:hover {
               border-color: #B31212;
               color: #B31212;
               background-color: white; }
-            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:focus {
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:focus,
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:focus {
               outline: 0; }
 
 /*********************
@@ -418,6 +668,7 @@ footer {
             font-weight: bolder; }
           footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock .contactInfo {
             width: 50%; }
+<<<<<<< HEAD
 
 /*******************************************************************************
 Profile page
@@ -580,3 +831,5 @@ Profile page
           background-color: white; }
 
 /*# sourceMappingURL=styles.css.map */
+=======
+>>>>>>> d3c5c39b67a8da61a6b665559b454c4a743eb51c

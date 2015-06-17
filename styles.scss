@@ -442,7 +442,7 @@ PRODUCT PAGE
               top: 6px;
               padding: 10px;
               border-radius: 50%;
-              transition: all 1s ease;
+              transition: all .5s ease;
             }
 
             #cartPlusOne.productAddedAnimate {
@@ -702,7 +702,8 @@ CART PAGE
         justify-content: flex-end;
 
         #cartCheckOut,
-        #cartContinue {
+        #cartContinue,
+        #cartClear {
           width: 20%;
           height: 100%;
           display: flex;

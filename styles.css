@@ -305,7 +305,7 @@ PRODUCT PAGE
               top: 6px;
               padding: 10px;
               border-radius: 50%;
-              transition: all 1s ease; }
+              transition: all .5s ease; }
             #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button #cartPlusOne.productAddedAnimate {
               transform: translateY(-100px);
               opacity: 1; }
@@ -474,14 +474,16 @@ CART PAGE
         display: flex;
         justify-content: flex-end; }
         #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut,
-        #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue {
+        #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue,
+        #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartClear {
           width: 20%;
           height: 100%;
           display: flex;
           align-items: center;
           justify-content: center; }
           #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button,
-          #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button {
+          #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button,
+          #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartClear button {
             width: 140.25px;
             height: 70px;
             background-color: #B31212;
@@ -491,12 +493,14 @@ CART PAGE
             transition: all .25s ease;
             -webkit-transition: all .25s ease; }
             #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:hover,
-            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:hover {
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:hover,
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartClear button:hover {
               border-color: #B31212;
               color: #B31212;
               background-color: white; }
             #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:focus,
-            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:focus {
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:focus,
+            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartClear button:focus {
               outline: 0; }
 
 /*********************

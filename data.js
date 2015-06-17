@@ -54,7 +54,7 @@ templates.cartItem = [
     '</div>',
     '<div class="cartItemRight">',
       '<div class="cartItemPriceBlock">',
-        '<%= productPrice %>',
+        '$<%= productPrice %>',
       '</div>',
       '<div class="cartItemDeleteBlock">',
         '<div class="cartItemDelete">',

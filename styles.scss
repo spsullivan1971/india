@@ -406,6 +406,93 @@ PRODUCT PAGE
   }
 }
 
+/***********************
+profilePage
+************************/
+
+#profilePage {
+  display: none;
+
+  #profilePageTitle {
+    padding: 25px 0;
+    border-bottom: 1px solid $primaryColor;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: lighter;
+      color: $primaryColor;
+    }
+  }
+
+  #profilePageContent {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+
+
+   .profilePageBlock {
+      width: 22.5%;
+      height: 300px;
+      margin-bottom: 25px;
+      cursor: pointer;
+      color: $tertiaryColor;
+      transition: all .25s ease;
+      -webkit-transition: all .25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .protBlockImage {
+        width: 100%;
+        height: 200px;
+         background-color: $primaryColor; */
+
+
+        img {
+          width: 100%;
+        }
+      }
+
+    /*  .catalogProductBlockInfo {
+        width: 100%;
+        height: 100px;
+        background-color: $primaryColor;
+        border: 1px solid $primaryColor;
+        text-align: center;
+
+        .catalogProductBlockTitle {
+          height: 80px;
+          font-weight: lighter;
+          font-size: 1.15rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .catalogProductBlockPrice {
+          height: 20px;
+          font-size: .6rem;
+          padding-bottom: 2.5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+*/
+      &:hover {
+        color: $primaryColor;
+        background-color: white;
+
+        > * {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
 /*********************
 CART PAGE
 *********************/

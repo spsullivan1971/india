@@ -219,6 +219,30 @@ templates.productPage = [
   '</div>'
 ].join("");
 
+templates.profilePage = [
+  '<div id="profilePageTitle">',
+    '<h2><%= profileTitle %></h2>',
+  '</div>',
+  '<div id="profilePageContent">',
+    '<div id="profilePageLeft">',
+      '<div id="profilePageLeftBlock">',
+        '<%= profileImage %>',
+      '</div>',
+    '</div>',
+    '<div id="profilePageRight">',
+      '<div id="profilePageRightBlock">',
+      '<div id="profilePageContent">',
+      '<%= firstName %>',
+      '<%= profileImage %>',
+      '<%= profileImage %>',
+      '<%= profileImage %>',
+
+      /* form data will insert here */
+      '</div>',
+    '</div>',
+  '</div>'
+].join("");
+
 templates.cartItem = [
   '<div class="cartItem" data-id="<%= _id %>">',
     '<div class="cartItemLeft">',

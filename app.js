@@ -207,3 +207,9 @@ var page = {
   },
 
 };
+
+
+//1. Make button that is profile link button
+//2. $(profileLinkButton).on('click', page.loadProfile)
+//4.  loadProfile: function(data) {
+/

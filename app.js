@@ -38,6 +38,7 @@ var page = {
       $('#usernameBlock').append($username)
       $('input[id="logInUsername"]').val('')
       $('#logInForm').hide()
+      $('#usernameBlock').addClass('activePage')
 
       })
 

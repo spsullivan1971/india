@@ -25,10 +25,24 @@ var page = {
   initEvents: function(event) {
       $('#headerRight').on('click', '#cartBlock', function(e) {
         e.preventDefault();
+
         $('#productPage').removeClass('activePage');
         $('#catalogPage').removeClass('activePage');
         $('#cartPage').addClass('activePage');
+        console.log($username);
       });
+
+      $('#headerRight').on('click', '#logInSubmitButton', function(event) {
+      event.preventDefault();
+      var $username = $('input[id="logInUsername"]').val()
+      $('#usernameBlock').append($username)
+      $('input[id="logInUsername"]').val('')
+      $('#logInForm').hide()
+      $('#usernameBlock').addClass('activePage')
+
+      })
+
+
 
       $('#headerLeftLogo img').on('click', function(e){
         e.preventDefault();
@@ -60,6 +74,9 @@ var page = {
 
   },
 
+  addOneItemToCart: function() {
+    page.loadTemplate()
+  },
 
   loadItems: function() {
     $.ajax ({

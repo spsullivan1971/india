@@ -35,7 +35,7 @@ var items = [{
 }, {
   "listing_id": 0004,
   "category_id": "Cigars",
-  "productImage": "images/store_large/macanudo",
+  "productImage": "images/store_large/macanudo.jpg",
   "productThumb": "images/thumbs/macanudo.jpg",
   "productTitle": "Macanudo: Churchill Limited",
   "productDescription": "Editorial review: The Macanudo Vintage Maduro 1997 opened somewhat dry with a nuttiness layering the front of my palate. Once over the shoulder the first third of this smoke displayed nice spicy, woodsy, cedary characters to go along with the nuttiness. This very slow burning cigar gave part to a thin white smoke and extreme white ash. What was very interesting is the taste the wrapper leaf was leaving on my lips. A very sweet, sugary taste almost like a clove cigarette… interesting.",
@@ -77,7 +77,8 @@ var items = [{
   "Country of Origin": "Honduras",
   "quantity": 1,
 }, {
-  "listing_id": 000
+
+  "listing_id": 0008,
   "category_id": "Cigars",
   "productImage": "images/store_large/Romeo_y_Jullieta.jpg",
   "productThumb": "images/thumbs/Romeo_y_Jullieta.jpg",

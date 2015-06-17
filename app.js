@@ -56,12 +56,21 @@ var page = {
         $('#cartPage').removeClass('activePage');
         $('#catalogPage').removeClass('activePage');
         $('#productPage').addClass('activePage');
+        $("html, body").animate({ scrollTop: 270 }, "slow");
       });
 
       $('#cartContinueShoppingButton').on('click', function(e) {
         e.preventDefault();
         $('#cartPage').removeClass('activePage');
         $('#catalogPage').addClass('activePage');
+      });
+
+      $('#pageWrapper').on('click', '#cartContinueShoppingButton', function(e){
+        e.preventDefault();
+        $('#productPage').removeClass('activePage');
+        $('#cartPage').removeClass('activePage');
+        $('#catalogPage').addClass('activePage');
+        $("html, body").animate({ scrollTop: 0 }, "slow");
       });
 
   },

@@ -123,7 +123,7 @@ var page = {
      })
     });
 
-    $('#pageWrapper').on('click', '#catalogAddToCartButton', function(e) {
+    $('#pageWrapper').on('click', '.catalogAddToCartButton', function(e) {
       e.preventDefault();
       $('#cartPlusOne').fadeIn().removeClass('productAddedStarting').addClass('productAddedAnimate');
       setTimeout(function(){

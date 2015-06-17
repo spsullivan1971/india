@@ -285,16 +285,18 @@ CATALOG PAGE
       background-color: #B31212;
       width: 100%;
       border: none;
-      padding: 18px;
+      padding: 4.5px;
       font-weight: lighter;
       color: white;
       transition: all 0.25s ease;
       -webkit-transition: all 0.25s ease;
       font-size: 1em; }
-    #catalogPage #catalogPageContent .catalogAddToCartButton:hover {
-      background-color: white;
-      color: #B31212;
-      border-color: #B31212; }
+      #catalogPage #catalogPageContent .catalogAddToCartButton:hover {
+        background-color: white;
+        color: #B31212;
+        border-color: #B31212; }
+      #catalogPage #catalogPageContent .catalogAddToCartButton:focus {
+        outline: 0; }
     #catalogPage #catalogPageContent .catalogWrapper {
       width: 22.5%;
       height: 400px;

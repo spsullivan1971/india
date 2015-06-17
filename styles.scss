@@ -8,7 +8,7 @@ $serifFont: 'Roboto Slab', serif;
 $mainFont: black;
 $headerFont: white;
 $primaryColor: #3A0256;
-$secondaryColor: #FFE600;
+$secondaryColor: white;
 $tertiaryColor: white;
 $red: #B31212;
 
@@ -181,34 +181,57 @@ header {
       align-items: center;
 
       #headerRightBlock2Inner {
-        height: 60%;
+        height: 80%;
         width: 60%;
         display: flex;
         align-items: center;
 
         #usernameBlock {
-          height: 50%;
+          height: 35%;
           display: flex;
           justify-content: center;
-          align-items: center;
-          text-align: center;
+          align-items: flex-end;
         }
 
         #cartBlock {
           cursor: pointer;
-          border: 3px solid $primaryColor;
+          position: relative;
           transition: all .25s ease;
           -webkit-transition: all .25s ease;
           display: flex;
 
           > div {
-            width: 50%;
             text-align: center;
           }
 
-          &:hover {
-            border-color: $secondaryColor;
+          #cartBlockImage {
+            width: 100%;
 
+            i {
+              font-size: 4rem;
+              transition: all .25s ease;
+              -webkit-transition: all .25s ease;
+            }
+          }
+
+          #cartBlockAmount {
+            position: absolute;
+            color: $red;
+            top: 25px;
+            right: 30px;
+            transition: all .25s ease;
+            -webkit-transition: all .25s ease;
+          }
+
+          &:hover {
+
+            i {
+              color: $red;
+            }
+
+            #cartBlockAmount {
+              color: white;
+            }
           }
         }
       }
@@ -246,6 +269,7 @@ CATALOG PAGE
 
     .catalogProductBlock {
       width: 22.5%;
+      height: 300px;
       margin-bottom: 25px;
       cursor: pointer;
       color: $tertiaryColor;
@@ -258,7 +282,8 @@ CATALOG PAGE
 
       .catalogProductBlockImage {
         width: 100%;
-        background-color: $primaryColor;
+        height: 200px;
+        /* background-color: $primaryColor; */
 
         img {
           width: 100%;
@@ -267,22 +292,38 @@ CATALOG PAGE
 
       .catalogProductBlockInfo {
         width: 100%;
+        height: 100px;
         background-color: $primaryColor;
+        border: 1px solid $primaryColor;
         text-align: center;
 
         .catalogProductBlockTitle {
+          height: 80px;
           font-weight: lighter;
           font-size: 1.15rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         .catalogProductBlockPrice {
+          height: 20px;
           font-size: .6rem;
           padding-bottom: 2.5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
 
       &:hover {
-        color: $secondaryColor;
+        color: $primaryColor;
+        background-color: white;
+
+
+        > * {
+          background-color: white;
+        }
       }
     }
   }
@@ -354,6 +395,10 @@ PRODUCT PAGE
               color: $red;
               background-color: white;
             }
+
+            &:focus {
+              outline: 0;
+            }
           }
         }
       }
@@ -399,6 +444,7 @@ CART PAGE
 
         > div {
           width: 33%;
+          height: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -409,6 +455,38 @@ CART PAGE
           img {
             height: 100px;
             width: 100px;
+          }
+        }
+
+        .cartItemRight {
+
+          > div {
+            width: 50%;
+            text-align: center;
+          }
+
+          .cartItemDeleteBlock {
+            height: 100%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .cartItemDelete {
+              height: 50%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transition: all .25s ease;
+              -webkit-transition: all .25s ease;
+
+              &:hover {
+                background-color: $red;
+                color: white;
+                font-size: 1.5rem;
+              }
+            }
           }
         }
       }
@@ -459,6 +537,10 @@ CART PAGE
               color: $red;
               background-color: white;
             }
+
+            &:focus {
+              outline: 0;
+            }
           }
         }
       }
@@ -496,7 +578,6 @@ footer {
 
       #footerLeftBlockContent {
         font-size: .7rem;
-        font-weight: lighter;
         font-family: $serifFont;
       }
     }

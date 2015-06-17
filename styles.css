@@ -181,10 +181,32 @@ CATALOG PAGE
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap; }
-    #catalogPage #catalogPageContent .catalogProductBlock {
+    #catalogPage #catalogPageContent #catalogAddToCartButton {
+      background-color: #B31212;
+      border: 3px solid white;
+      padding: 18px;
+      font-weight: lighter;
+      color: white;
+      transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease;
+      font-size: 1em; }
+    #catalogPage #catalogPageContent #catalogAddToCartButton:hover {
+      background-color: white;
+      color: #B31212;
+      border-color: #B31212; }
+    #catalogPage #catalogPageContent .catalogWrapper {
       width: 22.5%;
+      height: 400px;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.25s ease;
+      -webkit-transition: all 0.25s ease; }
+    #catalogPage #catalogPageContent .catalogProductBlock {
+      width: 100%;
       height: 300px;
-      margin-bottom: 75px;
+      margin-bottom: 5px;
       cursor: pointer;
       color: white;
       transition: all 0.25s ease;
@@ -219,18 +241,6 @@ CATALOG PAGE
           display: flex;
           align-items: center;
           justify-content: center; }
-        #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo #catalogAddToCartButton {
-          background-color: #B31212;
-          border: 3px solid white;
-          padding: 18px;
-          font-weight: lighter;
-          color: white;
-          transition: all 0.25s ease;
-          -webkit-transition: all 0.25s ease; }
-        #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo #catalogAddToCartButton:hover {
-          background-color: white;
-          color: #B31212;
-          border-color: #B31212; }
       #catalogPage #catalogPageContent .catalogProductBlock:hover {
         color: #3A0256;
         background-color: white; }

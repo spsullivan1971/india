@@ -89,7 +89,7 @@ var page = {
       $('#cartPage').removeClass('activePage');
       $('#productPage').removeClass('activePage');
       $('#catalogPage').addClass('activePage');
-    });
+    }); 
 
     $('#cartContinueShoppingButton').on('click', function(e) {
       $('#cartPage').removeClass('activePage');

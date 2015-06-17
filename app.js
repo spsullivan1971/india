@@ -72,6 +72,17 @@ var page = {
         $('#catalogPage').addClass('activePage');
       });
 
+      $('#cartCheckOutButton').on('click', function(e) {
+        e.preventDefault();
+        alert("You have checkout out! Thank you for your order!")
+      });
+
+      $('#cartBlock').on('click', function(e) {
+        e.preventDefault();
+        $('#cartPage').removeClass('activePage');
+        $('productPage').removeClass('activePage');
+        $('#catalogPage').addClass('activePage');
+      });
   },
 
   addOneItemToCart: function() {

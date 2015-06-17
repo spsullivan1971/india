@@ -38,6 +38,9 @@ GENERAL
 .activePage {
   display: block !important; }
 
+.hidePage {
+  display: none; }
+
 /*********************
 HEADER
 *********************/
@@ -48,7 +51,7 @@ header {
   display: flex;
   margin-bottom: 50px; }
   header #headerLeft {
-    width: 80%;
+    width: 70%;
     display: flex; }
     header #headerLeft #headerLeftBlock {
       width: 100%;
@@ -72,7 +75,7 @@ header {
           font-weight: lighter;
           font-family: "Alex Brush", cursive; }
   header #headerRight {
-    width: 20%;
+    width: 30%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -80,7 +83,8 @@ header {
     header #headerRight #headerRightBlock {
       width: 100%;
       height: 60%;
-      display: block; }
+      display: flex;
+      align-items: center; }
       header #headerRight #headerRightBlock #logInForm {
         height: 100%;
         display: flex;
@@ -125,12 +129,13 @@ header {
         height: 60%;
         width: 60%;
         display: flex;
-        flex-direction: column; }
+        align-items: center; }
         header #headerRight #headerRightBlock2 #headerRightBlock2Inner #usernameBlock {
           height: 50%;
           display: flex;
           justify-content: center;
-          align-items: center; }
+          align-items: center;
+          text-align: center; }
         header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock {
           cursor: pointer;
           border: 3px solid #3A0256;
@@ -142,6 +147,12 @@ header {
             text-align: center; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock:hover {
             border-color: #FFE600; }
+          #cartBlock {
+            width: 70%;
+          }
+          #usernameBlock {
+            text-align: center;
+          }
 
 .inactiveHeaderRightBlock {
   display: none !important; }
@@ -339,11 +350,7 @@ footer {
     display: flex;
     justify-content: center; }
     footer #footerRight #footerRightBlock {
-<<<<<<< HEAD
-      width: 50%; }
-=======
       width: 75%; }
->>>>>>> c2d3a11708083e65c5ab7f6fbe4d286ec3f1a926
       footer #footerRight #footerRightBlock #footerRightBlockTitle {
         text-align: center;
         padding: 15px 0; }
@@ -360,10 +367,7 @@ footer {
           margin-bottom: 15px; }
           footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock .contactLabel {
             width: 50%;
-<<<<<<< HEAD
-=======
             text-align: center;
->>>>>>> c2d3a11708083e65c5ab7f6fbe4d286ec3f1a926
             font-weight: bolder; }
           footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock .contactInfo {
             width: 50%; }

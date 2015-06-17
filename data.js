@@ -77,7 +77,7 @@ var items = [{
   "Country of Origin": "Honduras",
   "quantity": 1,
 }, {
-  "listing_id": 000
+  "listing_id": 0008,
   "category_id": "Cigars",
   "productImage": "images/store_large/Romeo_y_Jullieta.jpg",
   "productThumb": "images/thumbs/Romeo_y_Jullieta.jpg",

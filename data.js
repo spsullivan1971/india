@@ -196,7 +196,7 @@ templates.catalogBlock = [
   '</div>',
   '</div>',
   '<div class="catalogProductAddToCartBlock">',
-  '<button id="catalogAddToCartButton">Add To Cart</button>',
+  '<button class="catalogAddToCartButton">Add To Cart</button>',
   '</div>',
   '</div>'
 ].join("");

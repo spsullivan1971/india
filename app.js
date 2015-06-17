@@ -132,6 +132,7 @@ var page = {
       $('#cartPage').removeClass('activePage');
       $('#productPage').removeClass('activePage');
       $('#catalogPage').addClass('activePage');
+    });
 
     $('#productContinueShoppingButton').on('click', function(e) {
       e.preventDefault();

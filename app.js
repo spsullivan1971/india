@@ -122,6 +122,26 @@ var page = {
      })
     });
 
+    $('#pageWrapper').on('click', '#catalogAddToCartButton', function(e) {
+      e.preventDefault();
+      $('#cartPlusOne').fadeIn().removeClass('productAddedStarting').addClass('productAddedAnimate');
+      setTimeout(function(){
+        $('#cartPlusOne').removeClass('productAddedAnimate').addClass('productAddedStarting');
+      }, 1000);
+      var newProduct = page.getProductFromCatalogAddCart(this);
+      console.log(newProduct);
+      $.ajax({
+        url: page.urlCart,
+        method: 'POST',
+        data: newProduct,
+        success: function (data) {
+          page.refreshCart(data);
+        },
+        error: function (err) {
+          console.log("error ", err);
+        }
+      });
+    });
 
     $('#cartItemsBlock').on('click', '.cartItemDelete', function(e){
       var deleteId = $(this).closest('.cartItem').data('id');
@@ -239,6 +259,26 @@ var page = {
         console.log("error");
       }
     });
+  },
+
+  getProductFromCatalogAddCart: function(product) {
+    var matchedProduct;
+    console.log($(product).closest(".catalogWrapper").find(".catalogProductBlockTitle").text());
+    _.each(products, function(el,idx,arr) {
+      if ($(product).closest(".catalogWrapper").find(".catalogProductBlockTitle").text().trim() === el.productTitle) {
+        matchedProduct = el;
+      }
+    });
+    console.log(matchedProduct);
+    var newProduct = {
+      productTitle: matchedProduct.productTitle,
+      productDescription: matchedProduct.productDescription,
+      productPrice: matchedProduct.productPrice,
+      productImage: matchedProduct.productImage,
+      productThumb: matchedProduct.productThumb,
+      pairing: matchedProduct.pairing
+    }
+    return newProduct;
   },
 
   getProductFromCatalog: function(product) {

@@ -510,8 +510,8 @@ PRODUCT PAGE
         background-color: #3A0256;
         color: white;
         border: 3px solid #3A0256;
-        transition: all .25s ease;
-        -webkit-transition: all .25s ease; }
+        transition: all 0.25s ease;
+        -webkit-transition: all 0.25s ease; }
         #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input:hover {
           background-color: white;
           color: #3A0256; }
@@ -608,16 +608,10 @@ CART PAGE
             border: 3px solid white;
             font-weight: lighter;
             color: white;
-<<<<<<< HEAD
             transition: all 0.25s ease;
             -webkit-transition: all 0.25s ease; }
-            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:hover {
-=======
-            transition: all .25s ease;
-            -webkit-transition: all .25s ease; }
             #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:hover,
             #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:hover {
->>>>>>> 60fb6e3f9ad91face4c461923e881d652e4bcdc8
               border-color: #B31212;
               color: #B31212;
               background-color: white; }

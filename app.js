@@ -58,9 +58,17 @@ var page = {
         $('#productPage').addClass('activePage');
       });
 
+      $('#productContinueShoppingButton').on('click', function(e) {
+        e.preventDefault();
+        $('#cartPage').removeClass('activePage');
+        $('productPage').removeClass('activePage');
+        $('#catalogPage').addClass('activePage');
+      });
+
       $('#cartContinueShoppingButton').on('click', function(e) {
         e.preventDefault();
         $('#cartPage').removeClass('activePage');
+        $('productPage').removeClass('activePage');
         $('#catalogPage').addClass('activePage');
       });
 

@@ -84,6 +84,7 @@ header {
       width: 100%;
       height: 70%;
       display: flex;
+      justify-content: center;
       align-items: center; }
       header #headerRight #headerRightBlock #logInForm {
         height: 100%;

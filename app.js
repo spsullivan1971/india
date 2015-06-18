@@ -56,8 +56,8 @@ var page = {
 
       $('#headerRight').on('click', '#logInSubmitButton', function(event) {
       event.preventDefault();
-      var $username = $('input[id="logInUsername"]').val()
-      $('#usernameBlock').append($username)
+      $username = $('input[id="logInUsername"]').val()
+      $('#usernameBlock').text($username)
       $('input[id="logInUsername"]').val('')
       $('#logInForm').hide()
       $('#usernameBlock').addClass('activePage')

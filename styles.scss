@@ -478,21 +478,30 @@ profilePage
     justify-content: space-around;
     flex-wrap: wrap;
 
-    #catalogAddToCartButton {
+    .catalogProductAddToCartBlock {
+      width: 100%;
+    }
+
+    .catalogAddToCartButton {
       background-color: #B31212;
-      border: 3px solid white;
-      padding: 18px;
+      width: 100%;
+      border: none;
+      padding: 4.5px;
       font-weight: lighter;
       color: white;
       transition: all 0.25s ease;
       -webkit-transition: all 0.25s ease;
       font-size: 1em;
-    }
 
-    #catalogAddToCartButton:hover {
-      background-color: white;
-      color: $red;
-      border-color: $red;
+      &:hover {
+        background-color: white;
+        color: $red;
+        border-color: $red;
+      }
+
+      &:focus {
+        outline: 0;
+      }
     }
 
     .catalogWrapper {
@@ -509,7 +518,6 @@ profilePage
     .catalogProductBlock {
       width: 100%;
       height: 300px;
-      margin-bottom: 5px;
       cursor: pointer;
       color: $tertiaryColor;
       transition: all .25s ease;
@@ -682,7 +690,7 @@ PRODUCT PAGE
               top: 6px;
               padding: 10px;
               border-radius: 50%;
-              transition: all 1s ease;
+              transition: all .5s ease;
             }
 
             #cartPlusOne.productAddedAnimate {
@@ -943,7 +951,8 @@ CART PAGE
         justify-content: flex-end;
 
         #cartCheckOut,
-        #cartContinue {
+        #cartContinue,
+        #cartClear {
           width: 20%;
           height: 100%;
           display: flex;

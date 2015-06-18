@@ -196,7 +196,7 @@ templates.catalogBlock = [
   '</div>',
   '</div>',
   '<div class="catalogProductAddToCartBlock">',
-  '<button id="catalogAddToCartButton">Add To Cart</button>',
+  '<button class="catalogAddToCartButton">Add To Cart</button>',
   '</div>',
   '</div>'
 ].join("");
@@ -238,9 +238,7 @@ templates.productPage = [
     '</div>',
     '<div id="productReviewsFormBlock">',
       '<form id="productReviewsForm">',
-      '<div id="productReviewsFormUsername">',
-        'Guest',
-      '</div>',
+      '<div id="productReviewsFormUsername"></div>',
       '<div id="productReviewsFormComment">',
         '<textarea></textarea>',
       '</div>',

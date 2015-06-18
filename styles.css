@@ -9,7 +9,7 @@ html, body {
   width: 100%; }
 
 html {
-  font-size: 24px; }
+  font-size: 12px; }
 
 body {
   font-family: "Roboto", sans; }
@@ -152,8 +152,8 @@ header {
         header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock {
           cursor: pointer;
           position: relative;
-          transition: all 0.25s ease;
-          -webkit-transition: all 0.25s ease;
+          transition: all .25s ease;
+          -webkit-transition: all .25s ease;
           display: flex; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock > div {
             text-align: center; }
@@ -161,15 +161,15 @@ header {
             width: 100%; }
             header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock #cartBlockImage i {
               font-size: 4rem;
-              transition: all 0.25s ease;
-              -webkit-transition: all 0.25s ease; }
+              transition: all .25s ease;
+              -webkit-transition: all .25s ease; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock #cartBlockAmount {
             position: absolute;
             color: #B31212;
             top: 25px;
             right: 30px;
-            transition: all 0.25s ease;
-            -webkit-transition: all 0.25s ease; }
+            transition: all .25s ease;
+            -webkit-transition: all .25s ease; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock:hover i {
             color: #B31212; }
           header #headerRight #headerRightBlock2 #headerRightBlock2Inner #cartBlock:hover #cartBlockAmount {
@@ -265,427 +265,31 @@ CATALOG PAGE
     width: 73%;
     justify-content: flex-end; }
 
-#catalogPage {
-  display: none; }
-  #catalogPage #catalogPageTitle {
-    padding: 25px 0;
-    border-bottom: 1px solid #3A0256; }
-    #catalogPage #catalogPageTitle h2 {
-      font-size: 2.5rem;
-      font-weight: lighter;
-      color: #3A0256; }
-  #catalogPage #catalogPageContent {
-    padding: 25px 0;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; }
-    #catalogPage #catalogPageContent #catalogAddToCartButton {
-      background-color: #B31212;
-      border: 3px solid white;
-      padding: 18px;
-      font-weight: lighter;
-      color: white;
-      transition: all 0.25s ease;
-      -webkit-transition: all 0.25s ease;
-      font-size: 1em; }
-    #catalogPage #catalogPageContent #catalogAddToCartButton:hover {
-      background-color: white;
-      color: #B31212;
-      border-color: #B31212; }
-    #catalogPage #catalogPageContent .catalogWrapper {
-      width: 22.5%;
-      height: 400px;
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.25s ease;
-      -webkit-transition: all 0.25s ease; }
-    #catalogPage #catalogPageContent .catalogProductBlock {
-      width: 100%;
-      height: 300px;
-      margin-bottom: 5px;
-      cursor: pointer;
-      color: white;
-      transition: all 0.25s ease;
-      -webkit-transition: all 0.25s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockImage {
-        width: 100%;
-        height: 200px;
-        /* background-color: $primaryColor; */ }
-        #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockImage img {
-          width: 100%; }
-      #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo {
-        width: 100%;
-        height: 100px;
-        background-color: #3A0256;
-        border: 1px solid #3A0256;
-        text-align: center; }
-        #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo .catalogProductBlockTitle {
-          height: 80px;
-          font-weight: lighter;
-          font-size: 1.15rem;
-          display: flex;
-          align-items: center;
-          justify-content: center; }
-        #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo .catalogProductBlockPrice {
-          height: 20px;
-          font-size: .6rem;
-          padding-bottom: 2.5px;
-          display: flex;
-          align-items: center;
-          justify-content: center; }
-      #catalogPage #catalogPageContent .catalogProductBlock:hover {
-        color: #3A0256;
-        background-color: white; }
-        #catalogPage #catalogPageContent .catalogProductBlock:hover > * {
-          background-color: white; }
-
-/*********************
-PRODUCT PAGE
-*********************/
-#productPage {
-  display: none; }
-  #productPage #productPageTitle {
-    padding: 25px 0;
-    border-bottom: 1px solid #3A0256; }
-    #productPage #productPageTitle h2 {
-      font-size: 2.5rem;
-      font-weight: lighter;
-      color: #3A0256; }
-  #productPage #productPageContent {
-    margin: 25px 0;
-    display: flex;
-    flex-wrap: wrap; }
-    #productPage #productPageContent #productPageLeft {
-      width: 50%; }
-      #productPage #productPageContent #productPageLeft #productPagePairingBlock {
-        margin-top: 35px;
-        padding: 35px 15px 15px;
-        position: relative;
-        border: 1px solid #3A0256; }
-        #productPage #productPageContent #productPageLeft #productPagePairingBlock h4 {
-          position: absolute;
-          top: -32.5px;
-          left: 10px;
-          background-color: white;
-          font-size: 2rem;
-          font-weight: lighter;
-          color: #3A0256; }
-        #productPage #productPageContent #productPageLeft #productPagePairingBlock #productPagePairingImage {
-          display: flex;
-          justify-content: flex-start;
-          align-items: center; }
-          #productPage #productPageContent #productPageLeft #productPagePairingBlock #productPagePairingImage img {
-            cursor: pointer;
-            max-height: 100px;
-            max-width: 100px; }
-    #productPage #productPageContent #productPageRight {
-      width: 50%;
-      display: flex;
-      justify-content: center; }
-      #productPage #productPageContent #productPageRight #productPageRightBlock {
-        width: 80%;
-        color: #3A0256; }
-        #productPage #productPageContent #productPageRight #productPageRightBlock > div {
-          margin-bottom: 15px; }
-        #productPage #productPageContent #productPageRight #productPageRightBlock #productDescriptionBlock {
-          font-family: "Roboto Slab", serif; }
-        #productPage #productPageContent #productPageRight #productPageRightBlock #productPriceBlock {
-          text-align: center;
-          font-size: 1.5rem;
-          font-weight: lighter; }
-        #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock {
-          text-align: center; }
-          #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button {
-            background-color: #B31212;
-            border: 3px solid white;
-            padding: 15px;
-            position: relative;
-            font-weight: lighter;
-            color: white;
-            transition: all 0.25s ease;
-            -webkit-transition: all 0.25s ease; }
-            #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button:hover {
-              border-color: #B31212;
-              color: #B31212;
-              background-color: white; }
-            #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button:focus {
-              outline: 0; }
-            #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button #cartPlusOne {
-              display: none;
-              color: white;
-              position: absolute;
-              background-color: #B31212;
-              right: -55px;
-              top: 6px;
-              padding: 10px;
-              border-radius: 50%;
-              transition: all 1s ease; }
-            #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button #cartPlusOne.productAddedAnimate {
-              transform: translateY(-100px);
-              opacity: 1; }
-            #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button #cartPlusOne.productAddedStarting {
-              opacity: 0;
-              transform: translateY(0px); }
-    #productPage #productPageContent #productPageReviews {
-      margin-top: 50px;
-      padding: 35px 0 15px;
-      position: relative;
-      width: 100%;
-      border: 1px solid #3A0256;
-      display: flex;
-      flex-direction: column; }
-      #productPage #productPageContent #productPageReviews h4 {
-        position: absolute;
-        background-color: white;
-        top: -32.5px;
-        left: 10px;
-        font-size: 2rem;
-        font-weight: lighter; }
-      #productPage #productPageContent #productPageReviews #productReviewsBlock {
-        min-height: 100px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center; }
-        #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview {
-          width: 40%;
-          border: 1px solid #3A0256;
-          margin-bottom: 25px;
-          color: white; }
-          #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .productReviewContent {
-            min-height: 125px;
-            padding: 7.5px;
-            color: #3A0256; }
-          #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .reviewBottom {
-            width: 100%;
-            height: 50px;
-            display: flex;
-            align-items: center; }
-            #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .reviewBottom .productReviewRating {
-              width: 50%;
-              height: 100%;
-              display: flex;
-              background-color: #B31212;
-              justify-content: center;
-              align-items: center; }
-            #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .reviewBottom .productReviewAuthor {
-              width: 50%;
-              height: 100%;
-              background-color: #B31212;
-              padding: 7.5px 5px;
-              display: flex;
-              justify-content: flex-end;
-              align-items: center; }
-    #productPage #productPageContent #productReviewsFormBlock {
-      width: 100%;
-      margin-top: 25px;
-      display: flex;
-      justify-content: center; }
-      #productPage #productPageContent #productReviewsFormBlock #productReviewsForm {
-        width: 40%; }
-      #productPage #productPageContent #productReviewsFormBlock #productReviewsFormUsername {
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: lighter; }
-      #productPage #productPageContent #productReviewsFormBlock #productReviewsFormComment textarea {
-        width: 100%;
-        height: 150px;
-        resize: none; }
-        #productPage #productPageContent #productReviewsFormBlock #productReviewsFormComment textarea:focus {
-          outline: 0; }
-      #productPage #productPageContent #productReviewsFormBlock #productReviewsFormRating {
-        margin-bottom: 10px; }
-        #productPage #productPageContent #productReviewsFormBlock #productReviewsFormRating select {
-          width: 100%;
-          text-align: center; }
-      #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input {
-        width: 100%;
-        padding: 10px 0;
-        background-color: #3A0256;
-        color: white;
-        border: 3px solid #3A0256;
-        transition: all 0.25s ease;
-        -webkit-transition: all 0.25s ease; }
-        #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input:hover {
-          background-color: white;
-          color: #3A0256; }
-        #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input:focus {
-          outline: 0; }
-
-/*********************
-CART PAGE
-*********************/
-#cartPage {
-  display: none; }
-  #cartPage #cartPageTitle {
-    padding: 25px 0;
-    border-bottom: 1px solid #3A0256; }
-    #cartPage #cartPageTitle h2 {
-      font-size: 2.5rem;
-      font-weight: lighter;
-      color: #3A0256; }
-  #cartPage #cartPageContent {
-    margin: 25px 0; }
-    #cartPage #cartPageContent #cartItemsBlock {
-      border: 1px solid #3A0256;
-      min-height: 150px; }
-      #cartPage #cartPageContent #cartItemsBlock .cartItem {
-        width: 80%;
-        height: 150px;
-        margin: 0 auto;
-        border-bottom: 1px solid #3A0256;
-        display: flex;
-        flex-wrap: wrap; }
-        #cartPage #cartPageContent #cartItemsBlock .cartItem:last-child {
-          border: none; }
-        #cartPage #cartPageContent #cartItemsBlock .cartItem > div {
-          width: 33%;
-          height: 100%;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-        #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemImage img {
-          height: 100px;
-          width: 100px; }
-        #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight > div {
-          width: 50%;
-          text-align: center; }
-        #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight .cartItemDeleteBlock {
-          height: 100%;
-          cursor: pointer;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-          #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight .cartItemDeleteBlock .cartItemDelete {
-            height: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.25s ease;
-            -webkit-transition: all 0.25s ease; }
-            #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight .cartItemDeleteBlock .cartItemDelete:hover {
-              background-color: #B31212;
-              color: white;
-              font-size: 1.5rem; }
-    #cartPage #cartPageContent #cartInfoBlock {
-      width: 90%;
-      margin: 0 auto; }
-      #cartPage #cartPageContent #cartInfoBlock #cartTotalPriceBlock {
-        height: 75px;
-        display: flex;
-        justify-content: flex-end; }
-        #cartPage #cartPageContent #cartInfoBlock #cartTotalPriceBlock #cartTotalPrice {
-          width: 20%;
-          height: 100%;
-          font-size: 2rem;
-          font-weight: lighter;
-          display: flex;
-          align-items: center;
-          justify-content: center; }
-      #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock {
-        height: 75px;
-        display: flex;
-        justify-content: flex-end; }
-        #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut,
-        #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue {
-          width: 20%;
-          height: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center; }
-          #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button,
-          #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button {
-            width: 140.25px;
-            height: 70px;
-            background-color: #B31212;
-            border: 3px solid white;
-            font-weight: lighter;
-            color: white;
-            transition: all 0.25s ease;
-            -webkit-transition: all 0.25s ease; }
-            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:hover,
-            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:hover {
-              border-color: #B31212;
-              color: #B31212;
-              background-color: white; }
-            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:focus,
-            #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:focus {
-              outline: 0; }
-
-/*********************
-FOOTER
-*********************/
-footer {
-  background-color: #3A0256;
-  display: flex;
-  color: white;
-  padding-bottom: 25px; }
-  footer #footerLeft {
-    width: 50%;
-    display: flex;
-    justify-content: center; }
-    footer #footerLeft #footerLeftBlock {
-      width: 90%; }
-      footer #footerLeft #footerLeftBlock #footerLeftBlockTitle {
-        text-align: left;
-        padding: 15px 0; }
-        footer #footerLeft #footerLeftBlock #footerLeftBlockTitle h3 {
-          font-size: 2rem;
-          font-weight: lighter; }
-      footer #footerLeft #footerLeftBlock #footerLeftBlockContent {
-        font-size: .7rem;
-        font-family: "Roboto Slab", serif; }
-  footer #footerRight {
-    width: 50%;
-    display: flex;
-    justify-content: center; }
-    footer #footerRight #footerRightBlock {
-      width: 75%; }
-      footer #footerRight #footerRightBlock #footerRightBlockTitle {
-        text-align: center;
-        padding: 15px 0; }
-        footer #footerRight #footerRightBlock #footerRightBlockTitle h3 {
-          font-size: 2rem;
-          font-weight: lighter; }
-      footer #footerRight #footerRightBlock #footerRightBlockContent {
-        font-size: .7rem;
-        font-weight: lighter;
-        font-family: "Roboto Slab", serif; }
-        footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock {
-          display: flex;
-          justify-content: flex-end;
-          margin-bottom: 15px; }
-          footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock .contactLabel {
-            width: 50%;
-            text-align: center;
-            font-weight: bolder; }
-          footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock .contactInfo {
-            width: 50%; }
-<<<<<<< HEAD
-
-/*******************************************************************************
-Profile page
-*******************************************************************************/
-#loginFormWrapper {
+/***********************
+profilePage
+************************/
+#profilePageWrapper {
   width: 100%;
   height: 100%;
   z-index: 100;
   font-size: 2vmax;
-  background-color: rgba(0, 0, 0, .85);
+  background-color: rgba(0, 0, 0, 0.85);
   position: fixed;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   text-align: center;
-  form {
+  /*********************
+  PRODUCT PAGE
+  *********************/
+  /*********************
+  CART PAGE
+  *********************/
+  /*********************
+  FOOTER
+  *********************/ }
+  #profilePageWrapper #profilePageContent {
     position: fixed;
     top: 10%;
     left: 21%;
@@ -695,141 +299,442 @@ Profile page
     flex-wrap: wrap;
     text-align: center;
     height: auto;
-    width: 58%;
+    width: 68%;
     background-color: white;
-    opacity: none;
-  }
-  #loginFormInputWrapper {
-    width: 80%;
-    input {
-      width: 90%;
-    }
-  }
-  #labelText {
-    width: 20%;
-  }
-  label {
-    width: 100%;
-    height: auto;
-    text-align: right;
+    opacity: none; }
+  #profilePageWrapper #profileimage {
     display: flex;
-    align-items: center;
-  }
-  #createAcctSubmitWrapper {
-    width: 100%;
-    float: none;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    #createAcctSubmit {
-      width: 35%;
-      background-color: $red;
-      border: 3px solid white;
-      padding: 15px;
-      font-weight: lighter;
-      color: white;
-      transition: all .25s ease;
-      -webkit-transition: all .25s ease;
-      &:hover {
-        border-color: $red;
-        color: $red;
-        background-color: white;
-      }
-      &:focus {
-        outline: 0;
-      }
-    }
-  }
-  #createAcctCancelWrapper {
-    width: 100%;
-    float: none;
-    display: flex;
     align-items: center;
+    width: 40%; }
+  #profilePageWrapper #profileNameBlock {
+    /*display: flex;*/
+	  vertical-align: middle;
     justify-content: center;
-    #createAcctCancel {
-      background-color: white;
-      width: 35%;
-      border: 3px solid white;
-      padding: 15px;
-      font-weight: lighter;
-      color: gray;
-      transition: all .25s ease;
-      -webkit-transition: all .25s ease;
-      &:hover {
-        border-color: $red;
-        color: $red;
-        background-color: white;
-      }
-      &:focus {
-        outline: 0;
-      }
-    }
-  }
-  input {
-    margin: 1%;
-    width: 73%;
-    justify-content: flex-end;
-  }
+    align-items: center;
+    width: 40%; }
+
+#profilePageHeader {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 12px;
 }
 
-#profilePage {
-  display: none; }
-  #profilePage #profilePageTitle {
-    padding: 25px 0;
-    border-bottom: 1px solid #3A0256; }
-    #profilePage #profilePageTitle h2 {
-      font-size: 2.5rem;
-      font-weight: lighter;
-      color: #3A0256; }
-  #profilePage #profilePageContent {
-    padding: 25px 0;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; }
-    #profilePage #profilePageContent {
-      width: 22.5%;
-      height: 300px;
-      margin-bottom: 25px;
-      cursor: pointer;
-      color: white;
-      transition: all .25s ease;
-      -webkit-transition: all .25s ease;
-      display: flex;
-      flex-direction: column;
+	#profilePageWrapper #profileNameBlock #profileNameHeader {
+      /*display: flex;*/
       justify-content: center;
       align-items: center; }
-      #profilePage #profilePageContent {
+    #profilePageWrapper #profileNameBlock #profileNameEmail {
+      /*display: flex;*/
+      justify-content: center;
+      align-items: center; }
+    #profilePageWrapper #profileNameBlock #profileAddressBloc {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #profilePageWrapper #profileNameBlock #profileAddressBloc #addressHeaderWrapper {
+        /*display: flex;*/
+        justify-content: center;
+        align-items: center; }
+      #profilePageWrapper #profileNameBlock #profileAddressBloc #addressInfoWrapper {
+        /*display: flex;*/
+        justify-content: center;
+        align-items: center; }
+      #profilePageWrapper #profileNameBlock #profileAddressBloc #profilePageWish {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+  #profilePageWrapper #catalogPage {
+    display: none; }
+    #profilePageWrapper #catalogPage #catalogPageTitle {
+      padding: 25px 0;
+      border-bottom: 1px solid #3A0256; }
+      #profilePageWrapper #catalogPage #catalogPageTitle h2 {
+        font-size: 2.5rem;
+        font-weight: lighter;
+        color: #3A0256; }
+    #profilePageWrapper #catalogPage #catalogPageContent {
+      padding: 25px 0;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap; }
+      #profilePageWrapper #catalogPage #catalogPageContent #catalogAddToCartButton {
+        background-color: #B31212;
+        border: 3px solid white;
+        padding: 18px;
+        font-weight: lighter;
+        color: white;
+        transition: all 0.25s ease;
+        -webkit-transition: all 0.25s ease;
+        font-size: 1em; }
+      #profilePageWrapper #catalogPage #catalogPageContent #catalogAddToCartButton:hover {
+        background-color: white;
+        color: #B31212;
+        border-color: #B31212; }
+      #profilePageWrapper #catalogPage #catalogPageContent .catalogWrapper {
+        width: 22.5%;
+        height: 400px;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        transition: all .25s ease;
+        -webkit-transition: all .25s ease; }
+      #profilePageWrapper #catalogPage #catalogPageContent .catalogProductBlock {
         width: 100%;
-        height: 200px;
-        /* background-color: $primaryColor; */ }
-        #productPage #profilePageContent {
-          width: 100%; }
-      #profilePage #profilePageContent {
-        width: 100%;
-        height: 100px;
-        background-color: #3A0256;
-        border: 1px solid #3A0256;
-        text-align: center; }
-        #profilePage #profilePageContent {
-          height: 80px;
-          font-weight: lighter;
-          font-size: 1.15rem;
-          display: flex;
-          align-items: center;
-          justify-content: center; }
-        #profilePage #profilePageContent {
-          height: 20px;
-          font-size: .6rem;
-          padding-bottom: 2.5px;
-          display: flex;
-          align-items: center;
-          justify-content: center; }
-      #profilePage #productPageContent {
-        color: #3A0256;
-        background-color: white; }
-        #profilePage #productPageContent  {
+        height: 300px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        color: white;
+        transition: all .25s ease;
+        -webkit-transition: all .25s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        #profilePageWrapper #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockImage {
+          width: 100%;
+          height: 200px;
+          /* background-color: $primaryColor; */ }
+          #profilePageWrapper #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockImage img {
+            width: 100%; }
+        #profilePageWrapper #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo {
+          width: 100%;
+          height: 100px;
+          background-color: #3A0256;
+          border: 1px solid #3A0256;
+          text-align: center; }
+          #profilePageWrapper #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo .catalogProductBlockTitle {
+            height: 80px;
+            font-weight: lighter;
+            font-size: 1.15rem;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+          #profilePageWrapper #catalogPage #catalogPageContent .catalogProductBlock .catalogProductBlockInfo .catalogProductBlockPrice {
+            height: 20px;
+            font-size: .6rem;
+            padding-bottom: 2.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+        #profilePageWrapper #catalogPage #catalogPageContent .catalogProductBlock:hover {
+          color: #3A0256;
           background-color: white; }
+          #profilePageWrapper #catalogPage #catalogPageContent .catalogProductBlock:hover > * {
+            background-color: white; }
+  #profilePageWrapper #productPage {
+    display: none; }
+    #profilePageWrapper #productPage #productPageTitle {
+      padding: 25px 0;
+      border-bottom: 1px solid #3A0256; }
+      #profilePageWrapper #productPage #productPageTitle h2 {
+        font-size: 2.5rem;
+        font-weight: lighter;
+        color: #3A0256; }
+    #profilePageWrapper #productPage #productPageContent {
+      margin: 25px 0;
+      display: flex;
+      flex-wrap: wrap; }
+      #profilePageWrapper #productPage #productPageContent #productPageLeft {
+        width: 50%; }
+        #profilePageWrapper #productPage #productPageContent #productPageLeft #productPagePairingBlock {
+          margin-top: 35px;
+          padding: 35px 15px 15px;
+          position: relative;
+          border: 1px solid #3A0256; }
+          #profilePageWrapper #productPage #productPageContent #productPageLeft #productPagePairingBlock h4 {
+            position: absolute;
+            top: -32.5px;
+            left: 10px;
+            background-color: white;
+            font-size: 2rem;
+            font-weight: lighter;
+            color: #3A0256; }
+          #profilePageWrapper #productPage #productPageContent #productPageLeft #productPagePairingBlock #productPagePairingImage {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center; }
+            #profilePageWrapper #productPage #productPageContent #productPageLeft #productPagePairingBlock #productPagePairingImage img {
+              cursor: pointer;
+              max-height: 100px;
+              max-width: 100px; }
+      #profilePageWrapper #productPage #productPageContent #productPageRight {
+        width: 50%;
+        display: flex;
+        justify-content: center; }
+        #profilePageWrapper #productPage #productPageContent #productPageRight #productPageRightBlock {
+          width: 80%;
+          color: #3A0256; }
+          #profilePageWrapper #productPage #productPageContent #productPageRight #productPageRightBlock > div {
+            margin-bottom: 15px; }
+          #profilePageWrapper #productPage #productPageContent #productPageRight #productPageRightBlock #productDescriptionBlock {
+            font-family: "Roboto Slab", serif; }
+          #profilePageWrapper #productPage #productPageContent #productPageRight #productPageRightBlock #productPriceBlock {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: lighter; }
+          #profilePageWrapper #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock {
+            text-align: center; }
+            #profilePageWrapper #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button {
+              background-color: #B31212;
+              border: 3px solid white;
+              padding: 15px;
+              position: relative;
+              font-weight: lighter;
+              color: white;
+              transition: all .25s ease;
+              -webkit-transition: all .25s ease; }
+              #profilePageWrapper #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button:hover {
+                border-color: #B31212;
+                color: #B31212;
+                background-color: white; }
+              #profilePageWrapper #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button:focus {
+                outline: 0; }
+              #profilePageWrapper #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button #cartPlusOne {
+                display: none;
+                color: white;
+                position: absolute;
+                background-color: #B31212;
+                right: -55px;
+                top: 6px;
+                padding: 10px;
+                border-radius: 50%;
+                transition: all 1s ease; }
+              #profilePageWrapper #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button #cartPlusOne.productAddedAnimate {
+                transform: translateY(-100px);
+                opacity: 1; }
+              #profilePageWrapper #productPage #productPageContent #productPageRight #productPageRightBlock #productCartBlock button #cartPlusOne.productAddedStarting {
+                opacity: 0;
+                transform: translateY(0px); }
+      #profilePageWrapper #productPage #productPageContent #productPageReviews {
+        margin-top: 50px;
+        padding: 35px 0 15px;
+        position: relative;
+        width: 100%;
+        border: 1px solid #3A0256;
+        display: flex;
+        flex-direction: column; }
+        #profilePageWrapper #productPage #productPageContent #productPageReviews h4 {
+          position: absolute;
+          background-color: white;
+          top: -32.5px;
+          left: 10px;
+          font-size: 2rem;
+          font-weight: lighter; }
+        #profilePageWrapper #productPage #productPageContent #productPageReviews #productReviewsBlock {
+          min-height: 100px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: center; }
+          #profilePageWrapper #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview {
+            width: 40%;
+            border: 1px solid #3A0256;
+            margin-bottom: 25px;
+            color: white; }
+            #profilePageWrapper #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .productReviewContent {
+              min-height: 125px;
+              padding: 7.5px;
+              color: #3A0256; }
+            #profilePageWrapper #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .reviewBottom {
+              width: 100%;
+              height: 50px;
+              display: flex;
+              align-items: center; }
+              #profilePageWrapper #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .reviewBottom .productReviewRating {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                background-color: #B31212;
+                justify-content: center;
+                align-items: center; }
+              #profilePageWrapper #productPage #productPageContent #productPageReviews #productReviewsBlock .productReview .reviewBottom .productReviewAuthor {
+                width: 50%;
+                height: 100%;
+                background-color: #B31212;
+                padding: 7.5px 5px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center; }
+      #profilePageWrapper #productPage #productPageContent #productReviewsFormBlock {
+        width: 100%;
+        margin-top: 25px;
+        display: flex;
+        justify-content: center; }
+        #profilePageWrapper #productPage #productPageContent #productReviewsFormBlock #productReviewsForm {
+          width: 40%; }
+        #profilePageWrapper #productPage #productPageContent #productReviewsFormBlock #productReviewsFormUsername {
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: lighter; }
+        #profilePageWrapper #productPage #productPageContent #productReviewsFormBlock #productReviewsFormComment textarea {
+          width: 100%;
+          height: 150px;
+          resize: none; }
+          #profilePageWrapper #productPage #productPageContent #productReviewsFormBlock #productReviewsFormComment textarea:focus {
+            outline: 0; }
+        #profilePageWrapper #productPage #productPageContent #productReviewsFormBlock #productReviewsFormRating {
+          margin-bottom: 10px; }
+          #profilePageWrapper #productPage #productPageContent #productReviewsFormBlock #productReviewsFormRating select {
+            width: 100%;
+            text-align: center; }
+        #profilePageWrapper #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input {
+          width: 100%;
+          padding: 10px 0;
+          background-color: #3A0256;
+          color: white;
+          border: 3px solid #3A0256;
+          transition: all .25s ease;
+          -webkit-transition: all .25s ease; }
+          #profilePageWrapper #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input:hover {
+            background-color: white;
+            color: #3A0256; }
+          #profilePageWrapper #productPage #productPageContent #productReviewsFormBlock #productReviewsFormSubmit input:focus {
+            outline: 0; }
+  #profilePageWrapper #cartPage {
+    display: none; }
+    #profilePageWrapper #cartPage #cartPageTitle {
+      padding: 25px 0;
+      border-bottom: 1px solid #3A0256; }
+      #profilePageWrapper #cartPage #cartPageTitle h2 {
+        font-size: 2.5rem;
+        font-weight: lighter;
+        color: #3A0256; }
+    #profilePageWrapper #cartPage #cartPageContent {
+      margin: 25px 0; }
+      #profilePageWrapper #cartPage #cartPageContent #cartItemsBlock {
+        border: 1px solid #3A0256;
+        min-height: 150px; }
+        #profilePageWrapper #cartPage #cartPageContent #cartItemsBlock .cartItem {
+          width: 80%;
+          height: 150px;
+          margin: 0 auto;
+          border-bottom: 1px solid #3A0256;
+          display: flex;
+          flex-wrap: wrap; }
+          #profilePageWrapper #cartPage #cartPageContent #cartItemsBlock .cartItem:last-child {
+            border: none; }
+          #profilePageWrapper #cartPage #cartPageContent #cartItemsBlock .cartItem > div {
+            width: 33%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+          #profilePageWrapper #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemImage img {
+            height: 100px;
+            width: 100px; }
+          #profilePageWrapper #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight > div {
+            width: 50%;
+            text-align: center; }
+          #profilePageWrapper #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight .cartItemDeleteBlock {
+            height: 100%;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            #profilePageWrapper #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight .cartItemDeleteBlock .cartItemDelete {
+              height: 50%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transition: all .25s ease;
+              -webkit-transition: all .25s ease; }
+              #profilePageWrapper #cartPage #cartPageContent #cartItemsBlock .cartItem .cartItemRight .cartItemDeleteBlock .cartItemDelete:hover {
+                background-color: #B31212;
+                color: white;
+                font-size: 1.5rem; }
+      #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock {
+        width: 90%;
+        margin: 0 auto; }
+        #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock #cartTotalPriceBlock {
+          height: 75px;
+          display: flex;
+          justify-content: flex-end; }
+          #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock #cartTotalPriceBlock #cartTotalPrice {
+            width: 20%;
+            height: 100%;
+            font-size: 2rem;
+            font-weight: lighter;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+        #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock {
+          height: 75px;
+          display: flex;
+          justify-content: flex-end; }
+          #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut,
+          #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button,
+            #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button {
+              width: 140.25px;
+              height: 70px;
+              background-color: #B31212;
+              border: 3px solid white;
+              font-weight: lighter;
+              color: white;
+              transition: all .25s ease;
+              -webkit-transition: all .25s ease; }
+              #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:hover,
+              #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:hover {
+                border-color: #B31212;
+                color: #B31212;
+                background-color: white; }
+              #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartCheckOut button:focus,
+              #profilePageWrapper #cartPage #cartPageContent #cartInfoBlock #cartCheckOutBlock #cartContinue button:focus {
+                outline: 0; }
+  #profilePageWrapper footer {
+    background-color: #3A0256;
+    display: flex;
+    color: white;
+    padding-bottom: 25px; }
+    #profilePageWrapper footer #footerLeft {
+      width: 50%;
+      display: flex;
+      justify-content: center; }
+      #profilePageWrapper footer #footerLeft #footerLeftBlock {
+        width: 90%; }
+        #profilePageWrapper footer #footerLeft #footerLeftBlock #footerLeftBlockTitle {
+          text-align: left;
+          padding: 15px 0; }
+          #profilePageWrapper footer #footerLeft #footerLeftBlock #footerLeftBlockTitle h3 {
+            font-size: 2rem;
+            font-weight: lighter; }
+        #profilePageWrapper footer #footerLeft #footerLeftBlock #footerLeftBlockContent {
+          font-size: .7rem;
+          font-family: "Roboto Slab", serif; }
+    #profilePageWrapper footer #footerRight {
+      width: 50%;
+      display: flex;
+      justify-content: center; }
+      #profilePageWrapper footer #footerRight #footerRightBlock {
+        width: 75%; }
+        #profilePageWrapper footer #footerRight #footerRightBlock #footerRightBlockTitle {
+          text-align: center;
+          padding: 15px 0; }
+          #profilePageWrapper footer #footerRight #footerRightBlock #footerRightBlockTitle h3 {
+            font-size: 2rem;
+            font-weight: lighter; }
+        #profilePageWrapper footer #footerRight #footerRightBlock #footerRightBlockContent {
+          font-size: .7rem;
+          font-weight: lighter;
+          font-family: "Roboto Slab", serif; }
+          #profilePageWrapper footer #footerRight #footerRightBlock #footerRightBlockContent .contactBlock {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 15px; }
+          #profilePageWrapper footer #footerRight #footerRightBlock #footerRightBlockContent .contactLabel {
+            width: 50%;
+            text-align: center;
+            font-weight: bolder; }
+          #profilePageWrapper footer #footerRight #footerRightBlock #footerRightBlockContent .contactInfo {
+            width: 50%; }
 
 /*# sourceMappingURL=styles.css.map */
-=======
->>>>>>> d3c5c39b67a8da61a6b665559b454c4a743eb51c
